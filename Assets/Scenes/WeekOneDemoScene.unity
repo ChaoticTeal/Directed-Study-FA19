@@ -3983,7 +3983,7 @@ MonoBehaviour:
   slowMoveTime: 0.75
   moveTime: 0.5
   movementMargin: 0.05
-  collisionRaycastPoint: {fileID: 715910481}
+  collisionRaycastOrigin: {fileID: 715910481}
   collisionLayerMask:
     serializedVersion: 2
     m_Bits: 1
