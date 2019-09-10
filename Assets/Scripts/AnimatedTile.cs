@@ -8,6 +8,7 @@ using UnityEditor;
 
 using UnityEngine;
 
+// AnimatedTile class from https://github.com/Unity-Technologies/2d-extras
 namespace UnityEngine.Tilemaps
 {
 	[Serializable]
