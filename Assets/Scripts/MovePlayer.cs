@@ -28,12 +28,7 @@ public class MovePlayer : MonoBehaviour
     [Tooltip("Tag of terrain that slows the player down when moving.")]
     private string slowTerrainTag;
     #endregion
-
-    /// <summary>
-    /// Defines directions in an enum for legible array reference
-    /// </summary>
-    private enum directions { Down, Up, Left, Right};
-
+    
     /// <summary>
     /// The animator attached to the player
     /// </summary>
@@ -55,13 +50,25 @@ public class MovePlayer : MonoBehaviour
     /// </summary>
     private bool isMoving;
     /// <summary>
+    /// Is something in the way of movement?
+    /// </summary>
+    private bool isMovementBlocked;
+    /// <summary>
+    /// At what time did movement start?
+    /// </summary>
+    private float movementStartTime;
+    /// <summary>
     /// Stores movement input
     /// </summary>
     private Vector2 movementInput;
     /// <summary>
-    /// Movement input normalized for easier use
+    /// Stores the intended movement direction aligned to the X or Y axisd
     /// </summary>
-    private Vector2 normalizedMovementDirection;
+    private Vector2 desiredMovementDirection;
+    /// <summary>
+    /// The intended move position
+    /// </summary>
+    private Vector2 targetPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -78,23 +85,79 @@ public class MovePlayer : MonoBehaviour
     private void FixedUpdate()
     {
         if (canMove && hasReceivedMovementInput && !isMoving)
-            StartCoroutine(MovementRoutine());
+            StartMoving();
+        if (isMoving)
+        {
+            if (Vector3.Distance(targetPosition, transform.position) > movementMargin)
+            {
+                if (isInSlowTerrain)
+                    Move(slowMoveTime);
+                else
+                    Move(moveTime);
+            }
+            else
+                CleanUpMovement();
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    ToggleSlowMovement(collision);
+    //}
+
+    /// <summary>
+    /// Set variables and begin movement
+    /// </summary>
+    private void StartMoving()
     {
-        ToggleSlowMovement(collision);
+        desiredMovementDirection = GetOneDimensionalMovementVector();
+        isMovementBlocked = IsCollisionBlockingMovement(desiredMovementDirection);
+        //isInSlowTerrain = IsEnteringSlowTerrain(desiredMovementDirection) || isInSlowTerrain;
+        PlayAnim(desiredMovementDirection, isInSlowTerrain, isMovementBlocked);
+        movementStartTime = Time.time;
+        targetPosition = GetTargetPosition();
+        if(!isMovementBlocked)
+            isMoving = true;
     }
 
     /// <summary>
-    /// Toggles slow movement when crossing the border of slow terrain
+    /// Snap the player to the grid and allow movement to begin again
     /// </summary>
-    /// <param name="collision">The trigger collider the player crossed</param>
-    private void ToggleSlowMovement(Collider2D collision)
+    private void CleanUpMovement()
     {
-        if (collision.gameObject.tag == slowTerrainTag)
-            isInSlowTerrain = !isInSlowTerrain;
+        SnapToGrid();
+        isMoving = false;
     }
+
+    /// <summary>
+    /// Move the player toward the target position at a specified length of time
+    /// </summary>
+    /// <param name="movementTime">How long should the movement take, from start to finish?</param>
+    private void Move(float movementTime)
+    {
+        transform.position = Vector3.Lerp(transform.position, targetPosition, 
+            (Time.time - movementStartTime) / movementTime);
+    }
+
+    /// <summary>
+    /// Calculates the desired position based on movement direction
+    /// Target position will always be one unit away from the current position
+    /// </summary>
+    /// <returns>The desired end position of movement</returns>
+    private Vector2 GetTargetPosition()
+    {
+        return (Vector2)transform.position + desiredMovementDirection;
+    }
+
+    ///// <summary>
+    ///// Toggles slow movement when crossing the border of slow terrain
+    ///// </summary>
+    ///// <param name="collision">The trigger collider the player crossed</param>
+    //private void ToggleSlowMovement(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == slowTerrainTag)
+    //        isInSlowTerrain = !isInSlowTerrain;
+    //}
 
     /// <summary>
     /// Gets player input
@@ -121,37 +184,32 @@ public class MovePlayer : MonoBehaviour
     /// <summary>
     /// Triggers the player's animations based on movement direction
     /// </summary>
-    /// <param name="movementDirection">What direction is the player moving/facing?</param>
+    /// <param name="movementVector">What direction is the player moving/facing?</param>
     /// <param name="slowTerrain">Is the player in slow terrain?</param>
-    /// <param name="cannotMove">Is the player able to move?</param>
-    private void PlayAnim(directions movementDirection, bool slowTerrain, bool cannotMove)
+    /// <param name="isMovementBlocked">Is the player able to move?</param>
+    private void PlayAnim(Vector2 movementVector, bool slowTerrain, bool isMovementBlocked)
     {
         playerAnimator.SetBool("Slow", slowTerrain);
-        playerAnimator.SetBool("Idle", cannotMove);
-        switch (movementDirection)
-        {
-            case directions.Down:
-                playerAnimator.SetTrigger("Move Down");
-                break;
-            case directions.Up:
+        playerAnimator.SetBool("Idle", isMovementBlocked);
+        if (movementVector == Vector2.down)
+            playerAnimator.SetTrigger("Move Down");
+        else if (movementVector == Vector2.up)
                 playerAnimator.SetTrigger("Move Up");
-                break;
-            case directions.Left:
-                playerAnimator.SetTrigger("Move Left");
-                break;
-            case directions.Right:
-                playerAnimator.SetTrigger("Move Right");
-                break;
-        }
+        else if (movementVector == Vector2.left)
+            playerAnimator.SetTrigger("Move Left");
+        else if(movementVector == Vector2.right)
+            playerAnimator.SetTrigger("Move Right");
     }
 
     /// <summary>
     /// Raycasts for collision in the current direction before moving
     /// </summary>
     /// <returns>True if there is something in the way, else false.</returns>
-    private bool IsCollisionBlockingMovement(directions attemptedMoveDirection)
+    private bool IsCollisionBlockingMovement(Vector2 movementVector)
     {
-        RaycastHit2D hit = Physics2D.Raycast(collisionRaycastOrigin.position, normalizedMovementDirection,1f, collisionLayerMask);
+        RaycastHit2D hit = Physics2D.Raycast(
+            collisionRaycastOrigin.position, movementVector,
+            1f, collisionLayerMask);
         return hit.collider != null;
     }
 
@@ -159,79 +217,24 @@ public class MovePlayer : MonoBehaviour
     /// Raycasts for slow terrain in the current direction before moving
     /// </summary>
     /// <returns>True if there is slow terrain in the way, else false.</returns>
-    private bool IsEnteringSlowTerrain(directions attemptedMoveDirection)
+    private bool IsEnteringSlowTerrain(Vector2 movementVector)
     {
-        RaycastHit2D hit = Physics2D.Raycast(collisionRaycastOrigin.position, normalizedMovementDirection, 1f, slowTerrainLayerMask);
+        RaycastHit2D hit = Physics2D.Raycast(
+            collisionRaycastOrigin.position, movementVector, 
+            1f, slowTerrainLayerMask);
         return hit.collider != null;
     }
 
     /// <summary>
     /// Removes the less influential movement axis and normalizes what's left
     /// </summary>
-    private void NormalizeMovementVector()
+    private Vector2 GetOneDimensionalMovementVector()
     {
-        normalizedMovementDirection = movementInput;
+        Vector2 normalizedMovementDirection = movementInput;
         if (Mathf.Abs(normalizedMovementDirection.x) >= Math.Abs(normalizedMovementDirection.y))
             normalizedMovementDirection.y = 0;
         else
             normalizedMovementDirection.x = 0;
-        normalizedMovementDirection = normalizedMovementDirection.normalized;
-    }
-
-    /// <summary>
-    /// Checks normalized movement and returns a direction used to activate player animations
-    /// </summary>
-    /// <returns></returns>
-    private directions GetDirectionFromNormalizedMovement()
-    {
-        if (normalizedMovementDirection == Vector2.down)
-            return directions.Down;
-        if (normalizedMovementDirection == Vector2.up)
-            return directions.Up;
-        if (normalizedMovementDirection == Vector2.left)
-            return directions.Left;
-        else
-            return directions.Right;
-    }
-
-    /// <summary>
-    /// Move the player in a set interval aligned with the tilemap
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerator MovementRoutine()
-    {
-        isMoving = true;
-        NormalizeMovementVector();
-        directions movementDirection = GetDirectionFromNormalizedMovement();
-        if (IsCollisionBlockingMovement(movementDirection))
-        {
-            // TODO Play bump audio
-            PlayAnim(movementDirection, false, true);
-        }
-        else
-        {
-            Vector3 targetPosition = transform.position + new Vector3(normalizedMovementDirection.x, normalizedMovementDirection.y);
-            float startTime = Time.time;
-            if (IsEnteringSlowTerrain(movementDirection) || isInSlowTerrain)
-            {
-                PlayAnim(movementDirection, true, false);
-                while (Vector3.Distance(targetPosition, transform.position) > movementMargin)
-                {
-                    transform.position = Vector3.Lerp(transform.position, targetPosition, (Time.time - startTime) / slowMoveTime);
-                    yield return null;
-                }
-            }
-            else
-            {
-                PlayAnim(movementDirection, false, false);
-                while (Vector3.Distance(targetPosition, transform.position) > movementMargin)
-                {
-                    transform.position = Vector3.Lerp(transform.position, targetPosition, (Time.time - startTime) / moveTime);
-                    yield return null;
-                }
-            }
-            SnapToGrid();
-        }
-        isMoving = false;
+        return normalizedMovementDirection.normalized;
     }
 }
