@@ -1,0 +1,2103 @@
+fileFormatVersion: 2
+guid: 99ee8b32698050142b6974445522a4fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8298316641218103250
+    second: A4_0
+  - first:
+      213: 1984935675921030832
+    second: A4_1
+  - first:
+      213: 8658131705614044622
+    second: A4_2
+  - first:
+      213: 8802981832966165914
+    second: A4_3
+  - first:
+      213: 5174977637326314085
+    second: A4_4
+  - first:
+      213: -6609059794094382436
+    second: A4_5
+  - first:
+      213: 6637293859422801914
+    second: A4_6
+  - first:
+      213: 5435413678770395524
+    second: A4_7
+  - first:
+      213: -1011426064592667200
+    second: A4_8
+  - first:
+      213: -2254910823447582617
+    second: A4_9
+  - first:
+      213: -7923301893922789359
+    second: A4_10
+  - first:
+      213: 7165800356100131997
+    second: A4_11
+  - first:
+      213: 5882508776994332341
+    second: A4_12
+  - first:
+      213: 2288822911203362030
+    second: A4_13
+  - first:
+      213: 5249849327424403545
+    second: A4_14
+  - first:
+      213: 4626278027654701277
+    second: A4_15
+  - first:
+      213: -396458503436599965
+    second: A4_16
+  - first:
+      213: -603903474802223042
+    second: A4_17
+  - first:
+      213: -8970905213512709580
+    second: A4_18
+  - first:
+      213: 533877697968146156
+    second: A4_19
+  - first:
+      213: -8048261437095447483
+    second: A4_20
+  - first:
+      213: -7709370554470921856
+    second: A4_21
+  - first:
+      213: 3880028637452970953
+    second: A4_22
+  - first:
+      213: -6307928015821640872
+    second: A4_23
+  - first:
+      213: -5004714505067391061
+    second: A4_24
+  - first:
+      213: 2982485755789379993
+    second: A4_25
+  - first:
+      213: 2716359206317626430
+    second: A4_26
+  - first:
+      213: 1389923545484430909
+    second: A4_27
+  - first:
+      213: 8703989370967663248
+    second: A4_28
+  - first:
+      213: 2208202434052123257
+    second: A4_29
+  - first:
+      213: -2611111431025597364
+    second: A4_30
+  - first:
+      213: -6729870616702407113
+    second: A4_31
+  - first:
+      213: -6403168620120786642
+    second: A4_32
+  - first:
+      213: -4177464643744332891
+    second: A4_33
+  - first:
+      213: -3510807452514510951
+    second: A4_34
+  - first:
+      213: -5976566807089497267
+    second: A4_35
+  - first:
+      213: -1605308999987919755
+    second: A4_36
+  - first:
+      213: 897936289017111817
+    second: A4_37
+  - first:
+      213: -1411794945392532485
+    second: A4_38
+  - first:
+      213: 443211502676168594
+    second: A4_39
+  - first:
+      213: 5904652615783024699
+    second: A4_40
+  - first:
+      213: 5010742806487129864
+    second: A4_41
+  - first:
+      213: -6821241513144862015
+    second: A4_42
+  - first:
+      213: -6362082701462738368
+    second: A4_43
+  - first:
+      213: 8755052920999468955
+    second: A4_44
+  - first:
+      213: 2671376196106855396
+    second: A4_45
+  - first:
+      213: 1895707499186838210
+    second: A4_46
+  - first:
+      213: 3630305361937377276
+    second: A4_47
+  - first:
+      213: -1020960024738257131
+    second: A4_48
+  - first:
+      213: -5322621994936670408
+    second: A4_49
+  - first:
+      213: 2062594145262949974
+    second: A4_50
+  - first:
+      213: 8441443261042837334
+    second: A4_51
+  - first:
+      213: 5895434393258134521
+    second: A4_52
+  - first:
+      213: 5999456734981217893
+    second: A4_53
+  - first:
+      213: -3560464285377261120
+    second: A4_54
+  - first:
+      213: -5388659438138928583
+    second: A4_55
+  - first:
+      213: -1423125657247837615
+    second: A4_56
+  - first:
+      213: 8531018070987802123
+    second: A4_57
+  - first:
+      213: 3471033938831844278
+    second: A4_58
+  - first:
+      213: 6782394408685215447
+    second: A4_59
+  - first:
+      213: -5077561523735514390
+    second: A4_60
+  - first:
+      213: 6724874748638520617
+    second: A4_61
+  - first:
+      213: -182844567429631658
+    second: A4_62
+  - first:
+      213: 3356949964775880993
+    second: A4_63
+  - first:
+      213: 1032846018709111778
+    second: A4_64
+  - first:
+      213: -2893293040429893814
+    second: A4_65
+  - first:
+      213: -6740369912701969013
+    second: A4_66
+  - first:
+      213: 1886412789470042582
+    second: A4_67
+  - first:
+      213: 9070864905128726739
+    second: A4_68
+  - first:
+      213: -8265372401146977269
+    second: A4_69
+  - first:
+      213: 1793630846236408842
+    second: A4_70
+  - first:
+      213: 5721247860134687148
+    second: A4_71
+  - first:
+      213: -1124016281551499429
+    second: A4_72
+  - first:
+      213: -2298600290236948166
+    second: A4_73
+  - first:
+      213: -9198555300413694948
+    second: A4_74
+  - first:
+      213: 6177978217500549294
+    second: A4_75
+  - first:
+      213: 8400144779695074527
+    second: A4_76
+  - first:
+      213: -2393095520245243245
+    second: A4_77
+  - first:
+      213: -7518017256502917400
+    second: A4_78
+  - first:
+      213: -7950810295408280253
+    second: A4_79
+  - first:
+      213: -2837066634285220342
+    second: A4_80
+  - first:
+      213: -8416735378258513030
+    second: A4_81
+  - first:
+      213: 3027159287077809930
+    second: A4_82
+  - first:
+      213: 7709181824064799124
+    second: A4_83
+  - first:
+      213: 4439220987948237050
+    second: A4_84
+  - first:
+      213: -2050132302599593780
+    second: A4_85
+  - first:
+      213: 2359944203342880172
+    second: A4_86
+  - first:
+      213: 7354500026925732095
+    second: A4_87
+  - first:
+      213: -3645390919141109216
+    second: A4_88
+  - first:
+      213: 6348318199464548122
+    second: A4_89
+  - first:
+      213: 8185987809314590005
+    second: A4_90
+  - first:
+      213: -5060196976851070355
+    second: A4_91
+  - first:
+      213: 2130088587580720064
+    second: A4_92
+  - first:
+      213: 2688096138640379385
+    second: A4_93
+  - first:
+      213: 2093366848057636108
+    second: A4_94
+  - first:
+      213: -5798551177106849421
+    second: A4_95
+  - first:
+      213: -8248990881306953745
+    second: A4_96
+  - first:
+      213: -5850411652725386864
+    second: A4_97
+  - first:
+      213: 2748485179034531085
+    second: A4_98
+  - first:
+      213: 410955590111158831
+    second: A4_99
+  - first:
+      213: -2631320141502871910
+    second: A4_100
+  - first:
+      213: 2702513503219169718
+    second: A4_101
+  - first:
+      213: 5675875284722135202
+    second: A4_102
+  - first:
+      213: -4504838405202707437
+    second: A4_103
+  - first:
+      213: 5987603045540950309
+    second: A4_104
+  - first:
+      213: 3755591065375982270
+    second: A4_105
+  - first:
+      213: -4106125315386828009
+    second: A4_106
+  - first:
+      213: -5489148870458337851
+    second: A4_107
+  - first:
+      213: -7088675875394793497
+    second: A4_108
+  - first:
+      213: -4003266863185578945
+    second: A4_109
+  - first:
+      213: -3510265289997430689
+    second: A4_110
+  - first:
+      213: 5667000409117268096
+    second: A4_111
+  - first:
+      213: 3483732225804823244
+    second: A4_112
+  - first:
+      213: -4013589627836589091
+    second: A4_113
+  - first:
+      213: 3206503608955045381
+    second: A4_114
+  - first:
+      213: -1391012752701126964
+    second: A4_115
+  - first:
+      213: 7178353574605560914
+    second: A4_116
+  - first:
+      213: -4035091680966181919
+    second: A4_117
+  - first:
+      213: -7392856502525964761
+    second: A4_118
+  - first:
+      213: -5403945483663690005
+    second: A4_119
+  - first:
+      213: 2724604839277499905
+    second: A4_120
+  - first:
+      213: 4060199365418204689
+    second: A4_121
+  - first:
+      213: 6219117540448106244
+    second: A4_122
+  - first:
+      213: 1716936938541748901
+    second: A4_123
+  - first:
+      213: 4661032026161039112
+    second: A4_124
+  - first:
+      213: 5837864396725685007
+    second: A4_125
+  - first:
+      213: 694458049386743727
+    second: A4_126
+  - first:
+      213: 3014946282842596314
+    second: A4_127
+  - first:
+      213: 8894784875272645765
+    second: A4_128
+  - first:
+      213: -3051180485309796101
+    second: A4_129
+  - first:
+      213: 1743286549931046570
+    second: A4_130
+  - first:
+      213: -6854663179236861147
+    second: A4_131
+  - first:
+      213: 1952702094408073149
+    second: A4_132
+  - first:
+      213: 6898506759227436340
+    second: A4_133
+  - first:
+      213: -4433030088167682687
+    second: A4_134
+  - first:
+      213: -3873587934831044534
+    second: A4_135
+  - first:
+      213: -8428654586886203106
+    second: A4_136
+  - first:
+      213: 2912945404605683172
+    second: A4_137
+  - first:
+      213: 8596931652277327658
+    second: A4_138
+  - first:
+      213: 2675746297612881868
+    second: A4_139
+  - first:
+      213: -5357068753555382195
+    second: A4_140
+  - first:
+      213: 4260332159024640495
+    second: A4_141
+  - first:
+      213: 9084639180533870844
+    second: A4_142
+  - first:
+      213: 9208941518707809827
+    second: A4_143
+  - first:
+      213: 6904302244949874467
+    second: A4_144
+  - first:
+      213: 1946753382576266260
+    second: A4_145
+  - first:
+      213: -6288421226109636812
+    second: A4_146
+  - first:
+      213: 3588402045668003185
+    second: A4_147
+  - first:
+      213: -4918409430871028363
+    second: A4_148
+  - first:
+      213: -8222702497452130749
+    second: A4_149
+  - first:
+      213: 5765115536277629149
+    second: A4_150
+  - first:
+      213: -128874834457663552
+    second: A4_151
+  - first:
+      213: -1365363317559746561
+    second: A4_152
+  - first:
+      213: -3514585898360959301
+    second: A4_153
+  - first:
+      213: -3040145303679830037
+    second: A4_154
+  - first:
+      213: -5864371294195298072
+    second: A4_155
+  - first:
+      213: -6517126191122411687
+    second: A4_156
+  - first:
+      213: 3258665330275985436
+    second: A4_157
+  - first:
+      213: 1176704000891677413
+    second: A4_158
+  - first:
+      213: -8807994910383174859
+    second: A4_159
+  - first:
+      213: -5121950514282697148
+    second: A4_160
+  - first:
+      213: 6989218796384433519
+    second: A4_161
+  - first:
+      213: 746936617446885038
+    second: A4_162
+  - first:
+      213: 3287820520177884786
+    second: A4_163
+  - first:
+      213: 4490965146113359211
+    second: A4_164
+  - first:
+      213: -3095902839515567024
+    second: A4_165
+  - first:
+      213: 5987115555833968521
+    second: A4_166
+  - first:
+      213: 366176444590870060
+    second: A4_167
+  - first:
+      213: 3347007794871892231
+    second: A4_168
+  - first:
+      213: 7413120134995423127
+    second: A4_169
+  - first:
+      213: -7366195592649780298
+    second: A4_170
+  - first:
+      213: 2710595777899441921
+    second: A4_171
+  - first:
+      213: 3561845757145492179
+    second: A4_172
+  - first:
+      213: -3095324031346062712
+    second: A4_173
+  - first:
+      213: -7566101746480003632
+    second: A4_174
+  - first:
+      213: 4448182630436595060
+    second: A4_175
+  - first:
+      213: -4103905825614088360
+    second: A4_176
+  - first:
+      213: 5644591339423695270
+    second: A4_177
+  - first:
+      213: 5594184016279371917
+    second: A4_178
+  - first:
+      213: 9194662668759907660
+    second: A4_179
+  - first:
+      213: -2236501354096961411
+    second: A4_180
+  - first:
+      213: 385739715605065883
+    second: A4_181
+  - first:
+      213: -6446915775502459881
+    second: A4_182
+  - first:
+      213: -1956813480233178268
+    second: A4_183
+  - first:
+      213: 4331038636074961857
+    second: A4_184
+  - first:
+      213: -6962101331546224881
+    second: A4_185
+  - first:
+      213: 9203061606740551221
+    second: A4_186
+  - first:
+      213: -6322272805146112136
+    second: A4_187
+  - first:
+      213: 4941906346544159749
+    second: A4_188
+  - first:
+      213: -160576629614068666
+    second: A4_189
+  - first:
+      213: 7653420953475738743
+    second: A4_190
+  - first:
+      213: -8551026999502329152
+    second: A4_191
+  - first:
+      213: 3014968631581062273
+    second: A4_192
+  - first:
+      213: -8056018029082685853
+    second: A4_193
+  - first:
+      213: 1925101992157373784
+    second: A4_194
+  - first:
+      213: -864665334469470084
+    second: A4_195
+  - first:
+      213: -6723244335257716291
+    second: A4_196
+  - first:
+      213: 4674317417014925926
+    second: A4_197
+  - first:
+      213: 2878005969922713105
+    second: A4_198
+  - first:
+      213: -7841428704038437793
+    second: A4_199
+  - first:
+      213: -302265156820243385
+    second: A4_200
+  - first:
+      213: 5735797915605204145
+    second: A4_201
+  - first:
+      213: 5192818498649166033
+    second: A4_202
+  - first:
+      213: 4504465784884771840
+    second: A4_203
+  - first:
+      213: 5279283456176541240
+    second: A4_204
+  - first:
+      213: -5667871933424938878
+    second: A4_205
+  - first:
+      213: 6766102679891235618
+    second: A4_206
+  - first:
+      213: 8484535250658536905
+    second: A4_207
+  - first:
+      213: -8618227734465423575
+    second: A4_208
+  - first:
+      213: -6588093350497528435
+    second: A4_209
+  - first:
+      213: -7807656527740996527
+    second: A4_210
+  - first:
+      213: -8015267846747176346
+    second: A4_211
+  - first:
+      213: 9014809443598383769
+    second: A4_212
+  - first:
+      213: -1369919105255482613
+    second: A4_213
+  - first:
+      213: 6898259542265962862
+    second: A4_214
+  - first:
+      213: -5551395297714343118
+    second: A4_215
+  - first:
+      213: 3768612054678877686
+    second: A4_216
+  - first:
+      213: 2866467199256681254
+    second: A4_217
+  - first:
+      213: 3968584058572668668
+    second: A4_218
+  - first:
+      213: -7026491308815583973
+    second: A4_219
+  - first:
+      213: -2114647008693121431
+    second: A4_220
+  - first:
+      213: -5023985052837714367
+    second: A4_221
+  - first:
+      213: 1914016787999461248
+    second: A4_222
+  - first:
+      213: -3372574861001410191
+    second: A4_223
+  - first:
+      213: 1304820834872716802
+    second: A4_224
+  - first:
+      213: -4506248470164371940
+    second: A4_225
+  - first:
+      213: 3016636036624817312
+    second: A4_226
+  - first:
+      213: 441912908900892954
+    second: A4_227
+  - first:
+      213: 4241772849676511936
+    second: A4_228
+  - first:
+      213: -8301567247719011017
+    second: A4_229
+  - first:
+      213: 2213181188276526044
+    second: A4_230
+  - first:
+      213: -1681453256789685260
+    second: A4_231
+  - first:
+      213: -1359544865028330981
+    second: A4_232
+  - first:
+      213: -6093480817455382399
+    second: A4_233
+  - first:
+      213: -2408946669426042589
+    second: A4_234
+  - first:
+      213: 7428357955142081980
+    second: A4_235
+  - first:
+      213: -8664993787508293361
+    second: A4_236
+  - first:
+      213: 3801902102020570466
+    second: A4_237
+  - first:
+      213: -8493236886843144131
+    second: A4_238
+  - first:
+      213: 5662010224763449496
+    second: A4_239
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a44bf5547dec949bff59925e6caaa0
+      internalID: 8298316641218103250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee5594ccd3e55b4fa1bfcf9d3df445c
+      internalID: 1984935675921030832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77753f07b4b58774590cf18efa871e6d
+      internalID: 8658131705614044622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e1a6dad0d899844b67d89975add0b1
+      internalID: 8802981832966165914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e11425b12ec894283c2bbe9b89cca8
+      internalID: 5174977637326314085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ba0080afb60994eb29d77e60c05f27
+      internalID: -6609059794094382436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c031126a48d6069458f576e7b766a1dd
+      internalID: 6637293859422801914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28913f55f90a74443b880bfc4aaab551
+      internalID: 5435413678770395524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3faf1f2aebd53d478d19bca706e3fd2
+      internalID: -1011426064592667200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d2019dff54d054686fb20d37f1f58c
+      internalID: -2254910823447582617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08c15e022ba05f4e90df5814e75a5d5
+      internalID: -7923301893922789359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850b326ef480e0045b8b64a06449518b
+      internalID: 7165800356100131997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c5b44c14d2f5e4fab1781b35fa7709
+      internalID: 5882508776994332341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20789c7f9ddfab04995afc21a806fd7d
+      internalID: 2288822911203362030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacd1ac899fd62744965b9be419164e6
+      internalID: 5249849327424403545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49722a3af5673964a94103f092b0204e
+      internalID: 4626278027654701277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c2b557ac635f44d99794d4182627af
+      internalID: -396458503436599965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f82f08fa111ba244b0f15eca6e74eee
+      internalID: -603903474802223042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa41984bb9c9ec48af6794c347a502a
+      internalID: -8970905213512709580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bd0ebd5bf23694185e59ca29482510
+      internalID: 533877697968146156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49969314e1b41e46ae74e80e3068e90
+      internalID: -8048261437095447483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20faf11a9da39f74e8f1776d31fe4937
+      internalID: -7709370554470921856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaee8ed3aa9169d47b9432653e806cfd
+      internalID: 3880028637452970953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56e45dbce92a154597295eceaadafa2
+      internalID: -6307928015821640872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8988bc311cc974bb2345c6fe7357f8
+      internalID: -5004714505067391061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2e9af0e45a90e4797faed5ffb4a1ad
+      internalID: 2982485755789379993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff03fba94ff106743a8b620a26525e01
+      internalID: 2716359206317626430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0480a68e61186ba4a95c14fa6246266c
+      internalID: 1389923545484430909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496cc5c017399a5439dc83d787851d8f
+      internalID: 8703989370967663248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdbb52ecb75e0a42afe37c6638e5bd2
+      internalID: 2208202434052123257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079992c86d703a7469078296181d11da
+      internalID: -2611111431025597364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4bfcdbd423e1048aa3bb2180b4c81a
+      internalID: -6729870616702407113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680c72b1f184c634a96042ecb10ed639
+      internalID: -6403168620120786642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26cc05a1ded1b340bf9cbd49b2ebe8a
+      internalID: -4177464643744332891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_34
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b600173669ee0d948876298d5492ddfc
+      internalID: -3510807452514510951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_35
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6551f7b7a968bcb4f962cd4e74e84c00
+      internalID: -5976566807089497267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8079475dfc8aea54fb6a2678dc20a70e
+      internalID: -1605308999987919755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb5ee7f4b5dc7f4d81817993be9bbeb
+      internalID: 897936289017111817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_38
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b79193c429a9e44b9bcfbc803b183e
+      internalID: -1411794945392532485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7d9631c263d2047b26bdbe1c800e0a
+      internalID: 443211502676168594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f089ee5a8e043b04e9fbb117f3c9fb47
+      internalID: 5904652615783024699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98368197c0567874aa38eb37b661d0fb
+      internalID: 5010742806487129864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb1b56b0276f0540be593967f32ff6a
+      internalID: -6821241513144862015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_43
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552da56dfbc43d843a8e64e111c571c3
+      internalID: -6362082701462738368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1fbce63ae44fa4db38cc3a9fe0867e
+      internalID: 8755052920999468955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_45
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058325e19305d15408042fc10bc4d8c7
+      internalID: 2671376196106855396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f862617d38f73488fff0d9d7efb5f3
+      internalID: 1895707499186838210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_47
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654be1359ce85b64a921cba9c201a644
+      internalID: 3630305361937377276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fdce99bfba73c47b0294cc26764d39
+      internalID: -1020960024738257131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd50ef0782ffbd541aa1d41f425c3397
+      internalID: -5322621994936670408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6a0ae8f7bbd7143b1093fa727c9fad
+      internalID: 2062594145262949974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbec9cb47ba74c94d9601b8550a483a1
+      internalID: 8441443261042837334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4faa2b4c1d67e429d8b7893f731358
+      internalID: 5895434393258134521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3649daa7d9dda4db4b757443137aa7
+      internalID: 5999456734981217893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4531d61803cc42e4486c9b46db31d650
+      internalID: -3560464285377261120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02d4e8c208115a4d95487b0822c9454
+      internalID: -5388659438138928583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb83dabc25c0e0448edc2e08115da35
+      internalID: -1423125657247837615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c782e59b73a39f4abfee5702ae5fdea
+      internalID: 8531018070987802123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47ba6f2a45a0d146b1e6c941bcfb8e6
+      internalID: 3471033938831844278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4_59
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbbc427a14fb894ca2e2a3913eba40a
+      internalID: 6782394408685215447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a79f8a59fb008a843bb04eeb89ec20d7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

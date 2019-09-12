@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Slow Terrain
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Slow Terrain
   - 
   - 
   - 
@@ -38,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Terrain
+    uniqueID: 1267278479
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
