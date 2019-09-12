@@ -8,10 +8,10 @@ public class MovePlayer : MonoBehaviour
     #region SerializeFields
     [SerializeField]
     [Tooltip("Duration, in seconds, of a slow movement (through sand, etc.).")]
-    private float slowMoveTime = .75f;
+    private float slowMoveDuration = .75f;
     [SerializeField]
     [Tooltip("Duration, in seconds, of a single movement.")]
-    private float moveTime = .5f;
+    private float normalMoveDuration = .5f;
     [SerializeField]
     [Tooltip("Threshold to stop movement coroutine and snap to position.")]
     private float movementMargin = .05f;
@@ -33,14 +33,6 @@ public class MovePlayer : MonoBehaviour
     /// The animator attached to the player
     /// </summary>
     private Animator playerAnimator;
-    /// <summary>
-    /// Is the player allowed to move? Will be false if paused, in a cutscene, etc.
-    /// </summary>
-    private bool canMove = true;
-    /// <summary>
-    /// Has the player received input to move?
-    /// </summary>
-    private bool hasReceivedMovementInput;
     /// <summary>
     /// Is the player in slow terrain?
     /// </summary>
@@ -84,16 +76,15 @@ public class MovePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canMove && hasReceivedMovementInput && !isMoving)
+        bool hasReceivedMovementInput = movementInput.magnitude > 0;
+        if (hasReceivedMovementInput && !isMoving)
             StartMoving();
         if (isMoving)
         {
             if (Vector3.Distance(targetPosition, transform.position) > movementMargin)
             {
-                if (isInSlowTerrain)
-                    Move(slowMoveTime);
-                else
-                    Move(moveTime);
+                float chosenMovementDuration = isInSlowTerrain ? slowMoveDuration : normalMoveDuration;
+                Move(chosenMovementDuration);
             }
             else
                 CleanUpMovement();
@@ -132,11 +123,11 @@ public class MovePlayer : MonoBehaviour
     /// <summary>
     /// Move the player toward the target position at a specified length of time
     /// </summary>
-    /// <param name="movementTime">How long should the movement take, from start to finish?</param>
-    private void Move(float movementTime)
+    /// <param name="movementDurationInSeconds">How long should the movement take, from start to finish?</param>
+    private void Move(float movementDurationInSeconds)
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, 
-            (Time.time - movementStartTime) / movementTime);
+            (Time.time - movementStartTime) / movementDurationInSeconds);
     }
 
     /// <summary>
@@ -165,10 +156,6 @@ public class MovePlayer : MonoBehaviour
     private void GetInput()
     {
         movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        if (movementInput.magnitude > 0)
-            hasReceivedMovementInput = true;
-        else
-            hasReceivedMovementInput = false;
     }
 
     /// <summary>
