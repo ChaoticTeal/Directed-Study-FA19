@@ -237,6 +237,8 @@ GameObject:
   - component: {fileID: 370179161}
   - component: {fileID: 370179157}
   - component: {fileID: 370179158}
+  - component: {fileID: 370179163}
+  - component: {fileID: 370179162}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -272,7 +274,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     onUse:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 370179162}
+          m_MethodName: SetAnimationDirectionOnConversationStart
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1859296354}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
 --- !u!114 &370179158
@@ -433,6 +446,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &370179162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370179156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636a29dc2c4caf94ca63ebcf626585f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &370179163
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370179156}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7dd9e8a11355c8047b7f00bc0db996b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &633696981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,6 +2374,8 @@ GameObject:
   - component: {fileID: 1492906917}
   - component: {fileID: 1492906916}
   - component: {fileID: 1492906920}
+  - component: {fileID: 1492906922}
+  - component: {fileID: 1492906921}
   m_Layer: 0
   m_Name: NPC2
   m_TagString: Untagged
@@ -2365,7 +2411,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     onUse:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1492906921}
+          m_MethodName: SetAnimationDirectionOnConversationStart
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1859296354}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
 --- !u!114 &1492906917
@@ -2526,6 +2583,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1492906921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492906915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636a29dc2c4caf94ca63ebcf626585f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1492906922
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492906915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 993e2ef669d14c546970f3d175ae5de4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1714740044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2707,6 +2795,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &1859296354 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1516219768124800932, guid: d468411a9c75dbf43a0f866f06f07511,
+    type: 3}
+  m_PrefabInstance: {fileID: 1714740044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1859296355
 MonoBehaviour:
   m_ObjectHideFlags: 0
