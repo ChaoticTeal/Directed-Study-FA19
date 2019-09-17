@@ -17,11 +17,12 @@ public class AnimateNPC : MonoBehaviour
 
     /// <summary>
     /// Sets the NPC's animation direction to face the player initiating the conversation
+    /// Called by the Dialogue System OnUse event
     /// </summary>
     /// <param name="playerTransform">The location of the player.</param>
     public void SetAnimationDirectionOnConversationStart(Transform playerTransform)
     {
-        Vector2 playerDirection = GetOneDimensionalDirectionalVector(playerTransform.position);
+        Vector2 playerDirection = GetDirectionFromNPCToPlayer(playerTransform.position);
         if (playerDirection == Vector2.down)
             animator.SetTrigger("Move Down");
         else if (playerDirection == Vector2.up)
@@ -34,9 +35,10 @@ public class AnimateNPC : MonoBehaviour
     }
 
     /// <summary>
-    /// Creates a normalized directional vector from the distance between the NPC and player
+    /// Creates a vector pointing in the nearest cardinal direction from the NPC to the player
     /// </summary>
-    private Vector2 GetOneDimensionalDirectionalVector(Vector2 playerPosition)
+    /// <returns>Returns a vector of magnitude 1 pointing up, down, left, or right</returns>
+    private Vector2 GetDirectionFromNPCToPlayer(Vector2 playerPosition)
     {
         Vector2 normalizedPlayerDirection = playerPosition - (Vector2)transform.position;
         if (Mathf.Abs(normalizedPlayerDirection.x) >= Mathf.Abs(normalizedPlayerDirection.y))

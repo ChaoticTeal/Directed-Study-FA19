@@ -2313,6 +2313,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0222b9a32920eb748ae523a79a903e24,
         type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.dialogueUI
+      value: 
+      objectReference: {fileID: 177140, guid: 894885cc98d3c9541a1118ebf854cba8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &1179353649
