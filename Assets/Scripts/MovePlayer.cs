@@ -218,7 +218,7 @@ public class MovePlayer : MonoBehaviour
     private Vector2 GetOneDimensionalMovementVector()
     {
         Vector2 normalizedMovementDirection = movementInput;
-        if (Mathf.Abs(normalizedMovementDirection.x) >= Math.Abs(normalizedMovementDirection.y))
+        if (Mathf.Abs(normalizedMovementDirection.x) >= Mathf.Abs(normalizedMovementDirection.y))
             normalizedMovementDirection.y = 0;
         else
             normalizedMovementDirection.x = 0;
