@@ -41,7 +41,10 @@ public class Door : MonoBehaviour, IPuzzle
         {
             _currentSolution = value;
             if (DoesSolutionMatch())
-                animator.SetBool("Open", true);
+            {
+                if (CurrentSolution.Length == solution.Length)
+                    animator.SetBool("Open", true);
+            }
             else
             {
                 _currentSolution = "";
@@ -50,10 +53,14 @@ public class Door : MonoBehaviour, IPuzzle
         }
     }
 
+    private void Awake()
+    {
+        connectedSwitches = new List<Switch>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        connectedSwitches = new List<Switch>();
         animator = GetComponent<Animator>();
         animator.SetInteger("Type", doorType);
     }
@@ -88,9 +95,10 @@ public class Door : MonoBehaviour, IPuzzle
     /// <summary>
     /// Compares the attempted solution to the actual solution
     /// </summary>
-    /// <returns>True if the solutions match, false otherwise</returns>
+    /// <returns>True if the solutions match up to the current length, false otherwise</returns>
     private bool DoesSolutionMatch()
     {
-        return CurrentSolution == solution;
+        string subSolution = solution.Substring(0, CurrentSolution.Length);
+        return CurrentSolution == subSolution;
     }
 }

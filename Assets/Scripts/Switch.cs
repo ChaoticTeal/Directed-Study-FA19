@@ -27,11 +27,18 @@ public class Switch : MonoBehaviour
     /// </summary>
     private bool isSwitchOn;
 
+    /// <summary>
+    /// The IPuzzle component of the connected puzzle
+    /// </summary>
+    private IPuzzle puzzle;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         animator.SetInteger("Color", switchColor);
+        puzzle = connectedPuzzle.GetComponent<IPuzzle>();
+        puzzle.AppendSwitchList(this);
     }
 
     /// <summary>
@@ -43,7 +50,7 @@ public class Switch : MonoBehaviour
         if (!isSwitchOn)
         {
             AnimateSwitch();
-            connectedPuzzle.GetComponent<IPuzzle>().AppendSolution(solutionEntry);
+            puzzle.AppendSolution(solutionEntry);
         }
     }
 
