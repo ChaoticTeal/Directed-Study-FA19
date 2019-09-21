@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: A1 AnimTile1
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 7839472567634266479, guid: 86800b3f0bc516045a73faee9cb85947, type: 3}
-  - {fileID: 5200422134038387525, guid: 86800b3f0bc516045a73faee9cb85947, type: 3}
-  - {fileID: -3689183750564580217, guid: 86800b3f0bc516045a73faee9cb85947, type: 3}
+  - {fileID: 7602677157667033581, guid: 86800b3f0bc516045a73faee9cb85947, type: 3}
+  - {fileID: -3195991657481835693, guid: 86800b3f0bc516045a73faee9cb85947, type: 3}
+  - {fileID: -3304754891199758979, guid: 86800b3f0bc516045a73faee9cb85947, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
