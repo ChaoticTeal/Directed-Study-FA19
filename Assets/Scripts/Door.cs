@@ -3,22 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
 public class Door : MonoBehaviour, IPuzzle
 {
-    [SerializeField]
-    [Tooltip("The type of door to display. 0 for wooden, 1 for barred.")]
-    [Range(0, 1)]
-    private int doorType;
+    private enum DoorType { Wooden, Barred };
 
     [SerializeField]
-    [Tooltip("The solution to the puzzle.\nThis should be a string comprised of the connected switches' entry.")]
+    [Tooltip("Audio clip to play on door open.")]
+    private AudioClip openingClip;
+
+    [SerializeField]
+    [Tooltip("The type of door to display.")]
+    private DoorType doorType;
+
+    [SerializeField]
+    [Tooltip("The solution to the puzzle.\n" +
+        "This should be a combination of the connected switches' entries.")]
     private string solution = "1";
+
+    [SerializeField]
+    [Tooltip("The name of the Animator bool for door type.")]
+    private string animTypeBool = "Type";
+
+    [SerializeField]
+    [Tooltip("The name of the Animator bool for door open.")]
+    private string animOpenBool = "Open";
     
     /// <summary>
     /// The animator attached to the door
     /// </summary>
     private Animator animator;
+
+    /// <summary>
+    /// The audio source attached to the door
+    /// </summary>
+    private AudioSource audioSource;
 
     /// <summary>
     /// A list of all switches connected to the puzzle
@@ -28,7 +46,7 @@ public class Door : MonoBehaviour, IPuzzle
     /// <summary>
     /// The current attempted solution
     /// </summary>
-    private string _currentSolution;
+    private string currentSolution_useProperty;
 
     /// <summary>
     /// Property to access the current solution
@@ -36,21 +54,31 @@ public class Door : MonoBehaviour, IPuzzle
     /// </summary>
     private string CurrentSolution
     {
-        get { return _currentSolution; }
+        get { return currentSolution_useProperty; }
         set
         {
-            _currentSolution = value;
+            currentSolution_useProperty = value;
             if (DoesSolutionMatch())
             {
                 if (CurrentSolution.Length == solution.Length)
-                    animator.SetBool("Open", true);
+                    OpenDoor();
             }
             else
             {
-                _currentSolution = "";
+                currentSolution_useProperty = "";
                 ResetSwitches();
             }
         }
+    }
+
+    /// <summary>
+    /// Play an audio clip and the door opening animation
+    /// </summary>
+    private void OpenDoor()
+    {
+        animator.SetBool(Animator.StringToHash(animOpenBool), true);
+        if (audioSource != null)
+            audioSource.PlayOneShot(openingClip);
     }
 
     private void Awake()
@@ -62,22 +90,18 @@ public class Door : MonoBehaviour, IPuzzle
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetInteger("Type", doorType);
+        animator.SetInteger(Animator.StringToHash(animTypeBool),
+            (int)doorType);
+        audioSource = GetComponent<AudioSource>();
     }
 
-    /// <summary>
-    /// Add to the current solution
-    /// </summary>
-    /// <param name="entry">The solution piece connected to the activated switch</param>
+    // Functionality matches that described in IPuzzle
     public void AppendSolution(char entry)
     {
         CurrentSolution += entry;
     }
 
-    /// <summary>
-    /// Adds a switch to the list of connected switches
-    /// </summary>
-    /// <param name="addedSwitch">The switch to add</param>
+    // Functionality matches that described in IPuzzle
     public void AppendSwitchList(Switch addedSwitch)
     {
         connectedSwitches.Add(addedSwitch);
@@ -89,7 +113,7 @@ public class Door : MonoBehaviour, IPuzzle
     private void ResetSwitches()
     {
         foreach (Switch s in connectedSwitches)
-            s.ResetSwitch();
+            s.ResetByPuzzle();
     }
 
     /// <summary>

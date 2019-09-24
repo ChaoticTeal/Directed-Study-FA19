@@ -417,6 +417,16 @@ PrefabInstance:
       propertyPath: solution
       value: 4123
       objectReference: {fileID: 0}
+    - target: {fileID: 8596100355233976707, guid: 466d9b8b6a52dea439427647ae59b81c,
+        type: 3}
+      propertyPath: openingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d077d6b7468d3644cb82a887af1b830e, type: 3}
+    - target: {fileID: 5015642582084095835, guid: 466d9b8b6a52dea439427647ae59b81c,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 466d9b8b6a52dea439427647ae59b81c, type: 3}
 --- !u!1 &607099363
@@ -6158,6 +6168,16 @@ PrefabInstance:
     - target: {fileID: 8596100355233976706, guid: 466d9b8b6a52dea439427647ae59b81c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596100355233976707, guid: 466d9b8b6a52dea439427647ae59b81c,
+        type: 3}
+      propertyPath: openingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e08c38a35f5361c48bf84092e3b4dc47, type: 3}
+    - target: {fileID: 5015642582084095835, guid: 466d9b8b6a52dea439427647ae59b81c,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
