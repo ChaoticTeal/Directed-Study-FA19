@@ -3219,7 +3219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectedPuzzle
       value: 
-      objectReference: {fileID: 1201816648}
+      objectReference: {fileID: 1201816651}
     - target: {fileID: 451537978140226951, guid: f8354aab98b052c4bb4fb2933766e940,
         type: 3}
       propertyPath: switchColor
@@ -3802,18 +3802,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1201816648 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8596100355233976713, guid: 466d9b8b6a52dea439427647ae59b81c,
-    type: 3}
-  m_PrefabInstance: {fileID: 566757661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1201816649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8596100355233976706, guid: 466d9b8b6a52dea439427647ae59b81c,
     type: 3}
   m_PrefabInstance: {fileID: 566757661}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1201816651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596100355233976707, guid: 466d9b8b6a52dea439427647ae59b81c,
+    type: 3}
+  m_PrefabInstance: {fileID: 566757661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7f769d6c95ef54eafedfa6acfa1ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1370175019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4081,7 +4087,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectedPuzzle
       value: 
-      objectReference: {fileID: 1201816648}
+      objectReference: {fileID: 1201816651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8354aab98b052c4bb4fb2933766e940, type: 3}
 --- !u!1 &1557814299
@@ -4265,7 +4271,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectedPuzzle
       value: 
-      objectReference: {fileID: 1201816648}
+      objectReference: {fileID: 1201816651}
     - target: {fileID: 451537978140226951, guid: f8354aab98b052c4bb4fb2933766e940,
         type: 3}
       propertyPath: switchColor
@@ -4355,7 +4361,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectedPuzzle
       value: 
-      objectReference: {fileID: 1201816648}
+      objectReference: {fileID: 1201816651}
     - target: {fileID: 451537978140226951, guid: f8354aab98b052c4bb4fb2933766e940,
         type: 3}
       propertyPath: switchColor
@@ -4368,12 +4374,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8354aab98b052c4bb4fb2933766e940, type: 3}
---- !u!1 &1957308643 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8596100355233976713, guid: 466d9b8b6a52dea439427647ae59b81c,
+--- !u!114 &1957308645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8596100355233976707, guid: 466d9b8b6a52dea439427647ae59b81c,
     type: 3}
   m_PrefabInstance: {fileID: 8596100356520196458}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7f769d6c95ef54eafedfa6acfa1ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1957308648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8596100355233976706, guid: 466d9b8b6a52dea439427647ae59b81c,
@@ -6100,7 +6112,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connectedPuzzle
       value: 
-      objectReference: {fileID: 1957308643}
+      objectReference: {fileID: 1957308645}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8354aab98b052c4bb4fb2933766e940, type: 3}
 --- !u!1001 &8596100356520196458

@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour, IPuzzle
+/// <summary>
+/// A door is a puzzle which, when solved, opens and allows the player to pass
+/// </summary>
+public class Door : Puzzle
 {
     private enum DoorType { Wooden, Barred };
 
@@ -14,19 +17,6 @@ public class Door : MonoBehaviour, IPuzzle
     [SerializeField]
     [Tooltip("The type of door to display.")]
     private DoorType doorType;
-
-    [SerializeField]
-    [Tooltip("The solution to the puzzle.\n" +
-        "This should be a combination of the connected switches' entries.")]
-    private string solution = "1";
-
-    [SerializeField]
-    [Tooltip("The name of the Animator bool for door type.")]
-    private string animTypeBool = "Type";
-
-    [SerializeField]
-    [Tooltip("The name of the Animator bool for door open.")]
-    private string animOpenBool = "Open";
     
     /// <summary>
     /// The animator attached to the door
@@ -39,90 +29,31 @@ public class Door : MonoBehaviour, IPuzzle
     private AudioSource audioSource;
 
     /// <summary>
-    /// A list of all switches connected to the puzzle
+    /// Stores a hashed reference to the Type variable in the animator
     /// </summary>
-    private List<Switch> connectedSwitches;
+    private int animParamType = Animator.StringToHash("Type");
 
     /// <summary>
-    /// The current attempted solution
+    /// Stores a hashed reference to the Open variable in the animator
     /// </summary>
-    private string currentSolution_useProperty;
+    private int animParamOpen = Animator.StringToHash("Open");
 
     /// <summary>
-    /// Property to access the current solution
-    /// Compares it to the intended solution when modified
+    /// Play an audio clip and the door opening animation. Called by the 
+    /// CurrentSolutionAttempt property when the solution is correct.
     /// </summary>
-    private string CurrentSolution
+    protected override void DoPuzzleSolved()
     {
-        get { return currentSolution_useProperty; }
-        set
-        {
-            currentSolution_useProperty = value;
-            if (DoesSolutionMatch())
-            {
-                if (CurrentSolution.Length == solution.Length)
-                    OpenDoor();
-            }
-            else
-            {
-                currentSolution_useProperty = "";
-                ResetSwitches();
-            }
-        }
-    }
-
-    /// <summary>
-    /// Play an audio clip and the door opening animation
-    /// </summary>
-    private void OpenDoor()
-    {
-        animator.SetBool(Animator.StringToHash(animOpenBool), true);
+        animator.SetBool(animParamOpen, true);
         if (audioSource != null)
             audioSource.PlayOneShot(openingClip);
-    }
-
-    private void Awake()
-    {
-        connectedSwitches = new List<Switch>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetInteger(Animator.StringToHash(animTypeBool),
-            (int)doorType);
+        animator.SetInteger(animParamType, (int)doorType);
         audioSource = GetComponent<AudioSource>();
-    }
-
-    // Functionality matches that described in IPuzzle
-    public void AppendSolution(char entry)
-    {
-        CurrentSolution += entry;
-    }
-
-    // Functionality matches that described in IPuzzle
-    public void AppendSwitchList(Switch addedSwitch)
-    {
-        connectedSwitches.Add(addedSwitch);
-    }
-
-    /// <summary>
-    /// Calls the ResetSwitch function in each of the connected switches
-    /// </summary>
-    private void ResetSwitches()
-    {
-        foreach (Switch s in connectedSwitches)
-            s.ResetByPuzzle();
-    }
-
-    /// <summary>
-    /// Compares the attempted solution to the actual solution
-    /// </summary>
-    /// <returns>True if the solutions match up to the current length, false otherwise</returns>
-    private bool DoesSolutionMatch()
-    {
-        string subSolution = solution.Substring(0, CurrentSolution.Length);
-        return CurrentSolution == subSolution;
     }
 }

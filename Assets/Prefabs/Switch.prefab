@@ -184,14 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1977cd42a396a5c41bcd5434fabdfee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchClips:
-  - {fileID: 8300000, guid: 2a56105e3fd774144a4d2c1949547ac5, type: 3}
-  - {fileID: 8300000, guid: 770f9a4e7e0c24844b8a3efd0db62c97, type: 3}
+  switchOnClip: {fileID: 8300000, guid: 2a56105e3fd774144a4d2c1949547ac5, type: 3}
+  switchOffClip: {fileID: 8300000, guid: 770f9a4e7e0c24844b8a3efd0db62c97, type: 3}
   switchColor: 0
   connectedPuzzle: {fileID: 0}
   solutionEntry: 49
-  animColorBool: Color
-  animOnBool: On
 --- !u!82 &6275381873630713249
 AudioSource:
   m_ObjectHideFlags: 0

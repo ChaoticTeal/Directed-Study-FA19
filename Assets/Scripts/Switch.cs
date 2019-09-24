@@ -2,14 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// A Switch is one piece of activating a puzzle. When the player activates
+/// the switch, it flips on and sends a character to the connected puzzle.
+/// The switch will turn back off if it receives an event that the solution
+/// was incorrect.
+/// </summary>
 public class Switch : MonoBehaviour
 {
     private enum SwitchColor { Yellow, Blue, Red, Green };
 
     [SerializeField]
-    [Tooltip("List of audio clips the switch can play." +
-        "The first is played when it turns on, the second when it turns off.")]
-    private List<AudioClip> switchClips;
+    [Tooltip("The audio clip played when the switch turns on.")]
+    private AudioClip switchOnClip;
+
+    [SerializeField]
+    [Tooltip("The audio clip played when the switch turns off.")]
+    private AudioClip switchOffClip;
 
     [SerializeField]
     [Tooltip("The color of the switch.")]
@@ -18,30 +27,17 @@ public class Switch : MonoBehaviour
     [SerializeField]
     [Tooltip("The puzzle this switch is connected to.\n" +
         "Must have a script which implements the IPuzzle interface.")]
-    private GameObject connectedPuzzle;
+    private Puzzle connectedPuzzle;
 
     [SerializeField]
     [Tooltip("The character added to the puzzle's alphanumeric " +
         "solution when the switch is activated.")]
     private char solutionEntry = '1';
 
-    [SerializeField]
-    [Tooltip("The name of the Animator bool for switch color.")]
-    private string animColorBool = "Color";
-
-    [SerializeField]
-    [Tooltip("The name of the Animator bool for switch on.")]
-    private string animOnBool = "On";
-
     /// <summary>
     /// The animator component attached to the switch
     /// </summary>
     private Animator animator;
-
-    /// <summary>
-    /// The current audio clip to play
-    /// </summary>
-    private AudioClip currentClip;
 
     /// <summary>
     /// The audio source component attached to the switch
@@ -52,30 +48,38 @@ public class Switch : MonoBehaviour
     /// Is the switch active or not?
     /// The player can only use it if it is not already active.
     /// </summary>
-    private bool isSwitchActive_useProperty;
+    private bool isSwitchOn_useProperty;
 
     /// <summary>
-    /// The IPuzzle component of the connected puzzle
+    /// Stores a hashed reference to the Color variable in the animator
     /// </summary>
-    private IPuzzle puzzle;
+    private int animParamColor = Animator.StringToHash("Color");
 
     /// <summary>
-    /// Property to access current switch state
+    /// Stores a hashed reference to the On variable in the animator
     /// </summary>
-    private bool IsSwitchActive
+    private int animParamOn = Animator.StringToHash("On");
+
+    /// <summary>
+    /// Property to access current switch state. When on, the switch aims right.
+    /// If the switch is turned on, it adds to the puzzle's current solution
+    /// attempt. Whenever it's changed, it animates and plays audio.
+    /// </summary>
+    private bool IsSwitchOn
     {
-        get { return isSwitchActive_useProperty; }
+        get { return isSwitchOn_useProperty; }
         set
         {
-            isSwitchActive_useProperty = value;
-            if (isSwitchActive_useProperty)
-                puzzle.AppendSolution(solutionEntry);
-            animator.SetBool(Animator.StringToHash(animOnBool),
-                isSwitchActive_useProperty);
+            isSwitchOn_useProperty = value;
+            if (IsSwitchOn)
+                connectedPuzzle.CurrentSolutionAttempt += solutionEntry;
+            animator.SetBool(animParamOn, IsSwitchOn);
             if(audioSource != null)
             {
-                currentClip = isSwitchActive_useProperty ? switchClips[0] : switchClips[1];
-                audioSource.PlayOneShot(currentClip);
+                if (IsSwitchOn)
+                    audioSource.PlayOneShot(switchOnClip);
+                else
+                    audioSource.PlayOneShot(switchOffClip);
             }
         }
     }
@@ -84,11 +88,18 @@ public class Switch : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetInteger(Animator.StringToHash(animColorBool),
-            (int)switchColor);
-        puzzle = connectedPuzzle.GetComponent<IPuzzle>();
-        puzzle.AppendSwitchList(this);
+        animator.SetInteger(animParamColor, (int)switchColor);
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void OnEnable()
+    {
+        Puzzle.SolutionIsIncorrect += ResetByPuzzle;
+    }
+
+    private void OnDisable()
+    {
+        Puzzle.SolutionIsIncorrect -= ResetByPuzzle;
     }
 
     /// <summary>
@@ -97,9 +108,9 @@ public class Switch : MonoBehaviour
     /// </summary>
     public void OnUse()
     {
-        if (!IsSwitchActive)
+        if (!IsSwitchOn)
         {
-            IsSwitchActive = true;
+            IsSwitchOn = true;
         }
     }
 
@@ -107,11 +118,11 @@ public class Switch : MonoBehaviour
     /// Handles Reset from the connected puzzle
     /// The switch can only be deactivated if it is already active
     /// </summary>
-    public void ResetByPuzzle()
+    public void ResetByPuzzle(Puzzle puzzle)
     {
-        if (IsSwitchActive)
+        if (IsSwitchOn && puzzle == connectedPuzzle)
         {
-            IsSwitchActive = false;
+            IsSwitchOn = false;
         }
     }
 }
