@@ -93,12 +93,12 @@ public class Switch : MonoBehaviour
 
     private void OnEnable()
     {
-        Puzzle.IncorrectSolutionAttempted += OnAttemptWasIncorrect;
+        Puzzle.IncorrectSolutionAttempted += OnIncorrectSolutionAttempted;
     }
 
     private void OnDisable()
     {
-        Puzzle.IncorrectSolutionAttempted -= OnAttemptWasIncorrect;
+        Puzzle.IncorrectSolutionAttempted -= OnIncorrectSolutionAttempted;
     }
 
     /// <summary>
@@ -117,7 +117,7 @@ public class Switch : MonoBehaviour
     /// Handles the AttemptWasIncorrect event from the connected puzzle
     /// The switch can only be deactivated if it is already active
     /// </summary>
-    public void OnAttemptWasIncorrect(Puzzle puzzle)
+    public void OnIncorrectSolutionAttempted(Puzzle puzzle)
     {
         if (IsSwitchOn && puzzle == connectedPuzzle)
         {
