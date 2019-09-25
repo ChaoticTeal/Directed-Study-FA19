@@ -25,8 +25,7 @@ public class Switch : MonoBehaviour
     private SwitchColor switchColor;
 
     [SerializeField]
-    [Tooltip("The puzzle this switch is connected to.\n" +
-        "Must have a script which implements the IPuzzle interface.")]
+    [Tooltip("The puzzle this switch is connected to.")]
     private Puzzle connectedPuzzle;
 
     [SerializeField]
@@ -94,12 +93,12 @@ public class Switch : MonoBehaviour
 
     private void OnEnable()
     {
-        Puzzle.SolutionIsIncorrect += ResetByPuzzle;
+        Puzzle.AttemptWasIncorrect += OnAttemptWasIncorrect;
     }
 
     private void OnDisable()
     {
-        Puzzle.SolutionIsIncorrect -= ResetByPuzzle;
+        Puzzle.AttemptWasIncorrect -= OnAttemptWasIncorrect;
     }
 
     /// <summary>
@@ -115,10 +114,10 @@ public class Switch : MonoBehaviour
     }
 
     /// <summary>
-    /// Handles Reset from the connected puzzle
+    /// Handles the AttemptWasIncorrect event from the connected puzzle
     /// The switch can only be deactivated if it is already active
     /// </summary>
-    public void ResetByPuzzle(Puzzle puzzle)
+    public void OnAttemptWasIncorrect(Puzzle puzzle)
     {
         if (IsSwitchOn && puzzle == connectedPuzzle)
         {
