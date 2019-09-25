@@ -39,8 +39,8 @@ public abstract class Puzzle : MonoBehaviour
             else
             {
                 currentSolutionAttempt_useProperty = "";
-                if (AttemptWasIncorrect != null)
-                    AttemptWasIncorrect.Invoke(this);
+                if (IncorrectSolutionAttempted != null)
+                    IncorrectSolutionAttempted.Invoke(this);
             }
         }
     }
@@ -48,7 +48,7 @@ public abstract class Puzzle : MonoBehaviour
     /// <summary>
     /// An event to invoke when the solution attempt fails
     /// </summary>
-    public static event System.Action<Puzzle> AttemptWasIncorrect;
+    public static event System.Action<Puzzle> IncorrectSolutionAttempted;
 
     /// <summary>
     /// Compares the attempted solution to the actual solution
