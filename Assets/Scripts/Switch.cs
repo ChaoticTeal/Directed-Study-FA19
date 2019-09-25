@@ -93,12 +93,12 @@ public class Switch : MonoBehaviour
 
     private void OnEnable()
     {
-        Puzzle.AttemptWasIncorrect += OnAttemptWasIncorrect;
+        Puzzle.IncorrectSolutionAttempted += OnAttemptWasIncorrect;
     }
 
     private void OnDisable()
     {
-        Puzzle.AttemptWasIncorrect -= OnAttemptWasIncorrect;
+        Puzzle.IncorrectSolutionAttempted -= OnAttemptWasIncorrect;
     }
 
     /// <summary>
