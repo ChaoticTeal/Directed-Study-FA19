@@ -18,6 +18,14 @@ public class CinemachinePixelPerfect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MaintainPixelPerfectSize();
+    }
+
+    /// <summary>
+    /// Resets the virtual camera size to match the pixel perfect main camera
+    /// </summary>
+    private void MaintainPixelPerfectSize()
+    {
         if (vCam.m_Lens.OrthographicSize != mainCamera.orthographicSize)
             vCam.m_Lens.OrthographicSize = mainCamera.orthographicSize;
     }
