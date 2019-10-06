@@ -730,7 +730,22 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  questEntryStateIndicatorLevels: []
+  questEntryStateIndicatorLevels:
+  - entryNumber: 1
+    questState: 2
+    condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 0
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1 &633696981
 GameObject:
   m_ObjectHideFlags: 0
@@ -23828,6 +23843,14 @@ PrefabInstance:
       propertyPath: controlCursorState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22325660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22325660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
 --- !u!1 &969061292
@@ -24311,6 +24334,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7f769d6c95ef54eafedfa6acfa1ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1219037072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 125850, guid: 58ac37417e60e534f91138088a3e6f70,
+    type: 3}
+  m_PrefabInstance: {fileID: 910578423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1219037075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219037072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 768, y: 732}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!1 &1285177845
 GameObject:
   m_ObjectHideFlags: 0
@@ -26023,6 +26074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quest Log Window
       objectReference: {fileID: 0}
+    - target: {fileID: 11400838, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
+      propertyPath: unlockCursorWhileOpen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22410808, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -26107,10 +26162,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 11400838, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
-      propertyPath: unlockCursorWhileOpen
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 22451830, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -26121,11 +26172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22405738, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 137.25
+      value: 141.5
       objectReference: {fileID: 0}
     - target: {fileID: 22405738, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 274.5
+      value: 283
       objectReference: {fileID: 0}
     - target: {fileID: 22405738, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_AnchorMin.y
@@ -26695,12 +26746,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22447718, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22439574, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22439574, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439574, guid: 6c9f917c9d9db7b4ab97d521929324f0, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -56912,6 +56971,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quest Indicator Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4023366551116080422, guid: 2619820427c895f48b9ca5ddfcd06ca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791060934597980562, guid: 2619820427c895f48b9ca5ddfcd06ca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7657962006234570631, guid: 2619820427c895f48b9ca5ddfcd06ca7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -57022,16 +57091,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 318372676}
-    - target: {fileID: 4023366551116080422, guid: 2619820427c895f48b9ca5ddfcd06ca7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2791060934597980562, guid: 2619820427c895f48b9ca5ddfcd06ca7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2619820427c895f48b9ca5ddfcd06ca7, type: 3}
 --- !u!1001 &8596100356520196458

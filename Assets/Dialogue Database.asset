@@ -118,7 +118,7 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
-      value: active
+      value: unassigned
       type: 0
       typeString: CustomFieldType_QuestState
     - title: Entry 1
@@ -186,7 +186,7 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Entry 1 State
-      value: active
+      value: unassigned
       type: 0
       typeString: 
     - title: Entry 1
@@ -2093,7 +2093,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: CurrentQuestState("Talk to People") == "unassigned"
-      userScript: SetQuestState("Talk to People", "active")
+      userScript: 'SetQuestState("Talk to People", "active");
+
+        SetQuestEntryState("Talk to People", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2600,7 +2602,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Find the Missing Ghost", "active")
+      userScript: 'SetQuestState("Find the Missing Ghost", "active");
+
+        SetQuestEntryState("Find the Missing Ghost", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
