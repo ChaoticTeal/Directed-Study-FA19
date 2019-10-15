@@ -2531,7 +2531,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 10
         destinationConversationID: 4
-        destinationDialogueID: 11
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2612,8 +2612,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 672.8318
-        y: 269.31708
+        x: 672.83185
+        y: 326.21362
         width: 160
         height: 30
     - id: 12
@@ -2970,7 +2970,80 @@ MonoBehaviour:
         y: 69.44829
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    - id: 17
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: The cave is just a ways to the north, here.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Zoom2D(NorthCaveCameraFocus, , 3);
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 17
+        destinationConversationID: 4
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 671.1076
+        y: 266.8688
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 115.51721}
     canvasZoom: 0.5800002
   - id: 5
     fields:
@@ -3815,8 +3888,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: The village of Gratia is a peaceful haven for monsters who have trouble
-          finding a place in a human-centric society.
+        value: Kee-hee-hee! An unfamiliar face? How long before they lee-ee-eave?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3877,80 +3949,6 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: -1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: However, some particularly close-minded humans sought to deny monsters
-          even a separate space where they belong.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 2
-        destinationConversationID: 6
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 20
-        y: 129
-        width: 160
-        height: 30
-    - id: 3
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
         value: -1
         type: 5
         typeString: CustomFieldType_Actor
@@ -3963,8 +3961,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Years ago, one such human visited Gratia and struck it with a curse
-          to turn this haven into a hive of malcontentment.
+        value: '...new? No, they won''t dooOoo.'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -4001,11 +3998,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 20
-        y: 179
+        y: 130
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 1.1764526, y: 0}
+    canvasZoom: 0.8500001
   syncInfo:
     syncActors: 0
     syncItems: 0

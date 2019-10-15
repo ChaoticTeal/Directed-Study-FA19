@@ -3791,7 +3791,7 @@ MonoBehaviour:
     - id: 1
       fields:
       - title: Title
-        value: New Dialogue Entry
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
@@ -3815,7 +3815,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: The village of Gratia is a peaceful home for monsters who have trouble
+          finding a place in a human-centric society.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3855,8 +3856,8 @@ MonoBehaviour:
         y: 80
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 1.1764526, y: 0}
+    canvasZoom: 0.8500001
   syncInfo:
     syncActors: 0
     syncItems: 0
