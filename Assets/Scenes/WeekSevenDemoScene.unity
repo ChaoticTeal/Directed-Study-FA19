@@ -25401,6 +25401,71 @@ PrefabInstance:
       objectReference: {fileID: 1201816651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8354aab98b052c4bb4fb2933766e940, type: 3}
+--- !u!1 &1540050441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 207613246110338996, guid: fac86489511368743bad566ac40ccf4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 677204962818706825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540050450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540050441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2e3066672a3834182d094e4029952d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Make Introductions
+  questStateIndicatorLevels:
+  - questState: 1
+    condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 0
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - questState: 2
+    condition:
+      luaConditions:
+      - Variable["HasMetLuca"] == true
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 0
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - questState: 2
+    condition:
+      luaConditions:
+      - Variable["HasMetLuca"] == false
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 1
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  questEntryStateIndicatorLevels: []
 --- !u!1 &1557814299
 GameObject:
   m_ObjectHideFlags: 0
@@ -26404,6 +26469,71 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8596100356520196458}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1961911623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8024632753803602934, guid: b3d241850afa8a34ba7d48de5c22516f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5503786037007432348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1961911632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961911623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2e3066672a3834182d094e4029952d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questName: Make Introductions
+  questStateIndicatorLevels:
+  - questState: 1
+    condition:
+      luaConditions: []
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 0
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - questState: 2
+    condition:
+      luaConditions:
+      - Variable["HasMetSilq"] == true
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 0
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - questState: 2
+    condition:
+      luaConditions:
+      - Variable["HasMetSilq"] == false
+      questConditions: []
+      acceptedTags: []
+      acceptedGameObjects: []
+      luaWizardIndex: 0
+      lastEvaluationValue: 0
+    indicatorLevel: 1
+    onEnterState:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  questEntryStateIndicatorLevels: []
 --- !u!1 &2058222480
 GameObject:
   m_ObjectHideFlags: 0

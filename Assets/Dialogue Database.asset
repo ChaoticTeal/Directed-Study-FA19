@@ -5745,7 +5745,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: 
+      userScript: SetQuestEntryState("Make Introductions", 1, "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6592,7 +6592,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: 
+      userScript: SetQuestEntryState("Make Introductions", 1, "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7367,7 +7367,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: 
+      userScript: SetQuestEntryState("Make Introductions", 1, "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
