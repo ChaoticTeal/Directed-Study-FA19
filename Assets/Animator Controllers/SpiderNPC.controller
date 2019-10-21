@@ -70,7 +70,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5976ab67c6450ea498a678a4d6ec1c2c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8c54517aa6a7d694789a06804aaaac00, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -156,7 +156,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9e8eae7e92a246140a2c12e569018dd9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 69fff3728765be244a04e24c286c0f96, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -182,7 +182,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 50211e24deb4ea54097e493595927cf9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6b28f9dc8569f29469c49078fa7f0f04, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -194,7 +194,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SkeletonNPC
+  m_Name: SpiderNPC
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Move Down
@@ -254,7 +254,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6dfbeb2dd86673a49b93df7d3dd2a38b, type: 2}
+  m_Motion: {fileID: 7400000, guid: fd8d1d5ebda9b07429987ee5b537534b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

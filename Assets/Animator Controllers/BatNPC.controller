@@ -70,7 +70,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5976ab67c6450ea498a678a4d6ec1c2c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7ddcaa2f3c8aae74681e83171d4e4803, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -156,7 +156,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9e8eae7e92a246140a2c12e569018dd9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 66eebf66bd028974d82ceed343752c29, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -182,7 +182,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 50211e24deb4ea54097e493595927cf9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 327960548d84890479cdeb2462e964f8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -194,7 +194,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SkeletonNPC
+  m_Name: BatNPC
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Move Down
@@ -254,7 +254,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6dfbeb2dd86673a49b93df7d3dd2a38b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 96aff89b1c8f3cc489b3a96a3a4a9de6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
