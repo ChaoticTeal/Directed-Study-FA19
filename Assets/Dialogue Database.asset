@@ -37,7 +37,7 @@ MonoBehaviour:
   - id: 1
     fields:
     - title: Name
-      value: Player
+      value: Day
       type: 0
       typeString: 
     - title: Pictures
@@ -59,7 +59,7 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Name
-      value: NPC
+      value: Calcaneus
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -74,6 +74,88 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Display Name
+      value: Skeleton
+      type: 0
+      typeString: 
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 3
+    fields:
+    - title: Name
+      value: Wisp
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Display Name
+      value: Ghost
+      type: 0
+      typeString: 
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 4
+    fields:
+    - title: Name
+      value: Luca
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Display Name
+      value: Bat
+      type: 0
+      typeString: 
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 5
+    fields:
+    - title: Name
+      value: Silq
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Display Name
+      value: Spider
+      type: 0
+      typeString: CustomFieldType_Text
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -440,6 +522,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Description
       value: Has the player met Silq?
+      type: 0
+      typeString: 
+  - id: 8
+    fields:
+    - title: Name
+      value: HasHammer
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: Does the player have the hammer?
       type: 0
       typeString: 
   conversations:
@@ -1714,7 +1810,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: -1
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -1756,7 +1852,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1825,7 +1921,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -4402,7 +4498,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1
-        y: 62.92682
+        y: 60.601227
         width: 160
         height: 30
     - id: 2
@@ -4432,7 +4528,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: What are you doing here, kid?
+        value: Who are you and what are you doing here, kid?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -4505,7 +4601,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Just saying hi!
+        value: My name's Day! I'm just saying hi!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -4578,8 +4674,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: People don't come here "just to say hi." What do you want with this
-          town?
+        value: People don't come here "just to say hi," Day. What do you want with
+          this town?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5050,7 +5146,7 @@ MonoBehaviour:
       - originConversationID: 7
         originDialogueID: 10
         destinationConversationID: 7
-        destinationDialogueID: 11
+        destinationDialogueID: 28
         isConnector: 0
         priority: 2
       conditionsString: (CurrentQuestEntryState("Make Introductions", 2) == "active")
@@ -5140,7 +5236,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 174.55823
-        y: 213.30228
+        y: 264.46503
         width: 160
         height: 30
     - id: 12
@@ -5499,7 +5595,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 174.55823
-        y: 263.30228
+        y: 314.46503
         width: 160
         height: 30
     - id: 17
@@ -6109,8 +6205,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: The way to the forest is finally clear. Talk to Wisp and see what he
-          wants.
+        value: The way to the forest is finally clear. Talk to Wisp and see what they
+          want.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -6292,8 +6388,81 @@ MonoBehaviour:
         y: 108.651184
         width: 160
         height: 30
+    - id: 28
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Hmph. I guess it won't hurt to tell you my name's Calcaneus, then.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 28
+        destinationConversationID: 7
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Actor["Calcaneus"].Display_Name = "Calcaneus"
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 174.55823
+        y: 213.30228
+        width: 160
+        height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.43000028
+    canvasZoom: 0.40000027
   - id: 8
     fields:
     - title: Title
@@ -6313,7 +6482,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 3
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -6355,7 +6524,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -6436,7 +6605,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6509,7 +6678,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6576,7 +6745,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6650,7 +6819,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6727,7 +6896,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -6804,7 +6973,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6844,7 +7013,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: SetQuestEntryState("Make Introductions", 1, "active")
+      userScript: 'SetQuestEntryState("Make Introductions", 1, "active");
+
+        Actor["Wisp"].Display_Name = "Wisp"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6871,7 +7042,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -6944,7 +7115,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7011,7 +7182,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7053,7 +7224,9 @@ MonoBehaviour:
       conditionsString: Variable["VillagersMet"] >= 3
       userScript: 'SetQuestEntryState("Make Introductions", 1, "success");
 
-        SetQuestEntryState("Make Introductions", 2, "active")'
+        SetQuestEntryState("Make Introductions", 2, "active");
+
+        Actor["Wisp"].Display_Name = "Wisp"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7080,7 +7253,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7159,7 +7332,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 4
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -7201,7 +7374,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7282,7 +7455,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7355,7 +7528,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7422,7 +7595,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7496,7 +7669,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7573,7 +7746,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -7650,7 +7823,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7662,7 +7835,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Well, Day, you should've stayed far away! We don't need any outsiders
+        value: Well, Day, you should've stayed far away! Luca doesn't need any outsiders
           here, kee-hee!
         type: 0
         typeString: CustomFieldType_Text
@@ -7691,7 +7864,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: SetQuestEntryState("Make Introductions", 1, "active")
+      userScript: 'SetQuestEntryState("Make Introductions", 1, "active");
+
+        Actor["Luca"].Display_Name = "Luca"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7718,7 +7893,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7730,7 +7905,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Well, Day, you should've stayed far away! We don't need any outsiders
+        value: Well, Day, you should've stayed far away! Luca doesn't need any outsiders
           here, kee-hee!
         type: 0
         typeString: CustomFieldType_Text
@@ -7761,7 +7936,9 @@ MonoBehaviour:
       conditionsString: Variable["VillagersMet"] >= 3
       userScript: 'SetQuestEntryState("Make Introductions", 1, "success");
 
-        SetQuestEntryState("Make Introductions", 2, "active")'
+        SetQuestEntryState("Make Introductions", 2, "active");
+
+        Actor["Luca"].Display_Name = "Luca"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7788,7 +7965,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7861,7 +8038,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -7934,7 +8111,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 5
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -7976,7 +8153,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -8057,7 +8234,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8130,7 +8307,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8198,7 +8375,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8243,7 +8420,8 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: (CurrentQuestState("Make Introductions") == "active") and
+        (Variable["HasMetSilq"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8252,7 +8430,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 218
+        x: 216.6842
         y: 51
         width: 160
         height: 30
@@ -8271,7 +8449,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8348,7 +8526,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -8425,7 +8603,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8437,7 +8615,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: We don't need another mouth to feed around here, Day. Do us all a favor
+        value: The name's Silq. It's nice to meet you, Day. Now do us all a favor
           and leave.
         type: 0
         typeString: CustomFieldType_Text
@@ -8466,7 +8644,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: SetQuestEntryState("Make Introductions", 1, "active")
+      userScript: 'SetQuestEntryState("Make Introductions", 1, "active");
+
+        Actor["Silq"].Display_Name = "Silq"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8493,7 +8673,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8505,7 +8685,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: We don't need another mouth to feed around here, Day. Do us all a favor
+        value: The name's Silq. It's nice to meet you, Day. Now do us all a favor
           and leave.
         type: 0
         typeString: CustomFieldType_Text
@@ -8536,7 +8716,9 @@ MonoBehaviour:
       conditionsString: Variable["VillagersMet"] >= 3
       userScript: 'SetQuestEntryState("Make Introductions", 2, "active");
 
-        SetQuestEntryState("Make Introductions", 1, "success")'
+        SetQuestEntryState("Make Introductions", 1, "success");
+
+        Actor["Silq"].Display_Name = "Silq"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8545,7 +8727,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 327.89468
-        y: 207.89468
+        y: 206.57889
         width: 160
         height: 30
     - id: 8
@@ -8563,7 +8745,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8636,7 +8818,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 5
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8709,7 +8891,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: -1
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -8751,7 +8933,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -8826,7 +9008,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8870,7 +9052,7 @@ MonoBehaviour:
 
         SetQuestEntryState("For Want of a Hammer", 1, "success");
 
-'
+        Variable["HasHammer"] = true;'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8897,7 +9079,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: -1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -8947,6 +9129,350 @@ MonoBehaviour:
         serializedVersion: 2
         x: 203
         y: 81
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
+  - id: 12
+    fields:
+    - title: Title
+      value: Bridge
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: -1
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 12
+        originDialogueID: 0
+        destinationConversationID: 12
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 178
+        y: 1
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: It's the remains of a bridge. If only there were some way to fix it.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 2) == "unassigned"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 48
+        y: 51
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 'Fade(stay, 1, #ffffff);
+
+          AudioWait(Hammer)@1;
+
+          SetActive(Bridge,true)@1;
+
+          SetEnabled(SpriteRenderer,false,Broken Bridge)@1;
+
+          SetEnabled(BoxCollider2D,false,Broken Bridge)@1;
+
+          Fade(in, 1, #ffffff)@3;
+
+          Continue()@4;'
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 12
+        originDialogueID: 2
+        destinationConversationID: 12
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 257
+        y: 50
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: -1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: The bridge is fixed!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 12
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'SetQuestEntryState("For Want of a Hammer", 2, "success");
+
+        SetQuestEntryState("For Want of a Hammer", 3, "active")'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 257
+        y: 100
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
