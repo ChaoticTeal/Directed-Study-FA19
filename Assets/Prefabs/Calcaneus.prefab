@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 3354227700597150125}
   - component: {fileID: 1435291830687506194}
   - component: {fileID: 1081538907643715228}
-  - component: {fileID: 922858706271953031}
   - component: {fileID: 922858706271953024}
   - component: {fileID: 922858706271953025}
   m_Layer: 0
@@ -257,66 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636a29dc2c4caf94ca63ebcf626585f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &922858706271953031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922858706271953039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba2e3066672a3834182d094e4029952d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questName: Find the Missing Ghost
-  questStateIndicatorLevels:
-  - questState: 1
-    condition:
-      luaConditions: []
-      questConditions:
-      - questName: Talk to People
-        questState: 4
-      acceptedTags: []
-      acceptedGameObjects: []
-      luaWizardIndex: 0
-      lastEvaluationValue: 0
-    indicatorLevel: 2
-    onEnterState:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - questState: 2
-    condition:
-      luaConditions:
-      - Variable["HasFinishedCave"] == true
-      questConditions: []
-      acceptedTags: []
-      acceptedGameObjects: []
-      luaWizardIndex: 0
-      lastEvaluationValue: 0
-    indicatorLevel: 1
-    onEnterState:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - questState: 4
-    condition:
-      luaConditions: []
-      questConditions: []
-      acceptedTags: []
-      acceptedGameObjects: []
-      luaWizardIndex: 0
-      lastEvaluationValue: 0
-    indicatorLevel: 0
-    onEnterState:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  questEntryStateIndicatorLevels: []
 --- !u!114 &922858706271953024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,12 +357,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quest Indicator Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4023366551116080422, guid: 2619820427c895f48b9ca5ddfcd06ca7,
+    - target: {fileID: 2791060934597980562, guid: 2619820427c895f48b9ca5ddfcd06ca7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2791060934597980562, guid: 2619820427c895f48b9ca5ddfcd06ca7,
+    - target: {fileID: 4023366551116080422, guid: 2619820427c895f48b9ca5ddfcd06ca7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
