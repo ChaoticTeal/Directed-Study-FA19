@@ -483,6 +483,10 @@ MonoBehaviour:
       value: Return to Wisp with the bananas for their book binding.
       type: 0
       typeString: 
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   locations: []
   variables:
   - id: 1
@@ -6282,7 +6286,9 @@ MonoBehaviour:
       userScript: 'SetQuestState("For Want of a Hammer", "success"); SetQuestEntryState("For
         Want of a Hammer", 3, "success");
 
-        SetQuestState("Findings for Bindings", "unassigned")'
+        SetQuestState("Findings for Bindings", "unassigned");
+
+        SetQuestEntryState("Findings for Bindings", 1, "unassigned")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
