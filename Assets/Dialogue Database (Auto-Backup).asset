@@ -8587,7 +8587,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(QuestEntryComplete)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 8
@@ -10263,7 +10263,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(QuestEntryComplete)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 9
@@ -11636,7 +11636,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(QuestEntryComplete)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 10
@@ -13002,7 +13002,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(ChestOpen)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 11
@@ -13418,7 +13418,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(QuestEntryComplete)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 12
@@ -13610,7 +13610,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(ChestOpen)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 13
@@ -14238,7 +14238,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Audio(ChestOpen)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 17
@@ -14685,7 +14685,9 @@ MonoBehaviour:
 
           AnimatorTrigger(Move Right, Luca2Image);
 
-          MoveTo(Luca2EndPosition,Luca2Image,2);'
+          MoveTo(Luca2EndPosition,Luca2Image,2);
+
+          Audio(ChestOpen)'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 18
@@ -14905,7 +14907,9 @@ MonoBehaviour:
 
           AnimatorTrigger(Move Left,Luca2Image);
 
-          SetEnabled(SpriteRenderer,false,Luca2Image)@2;'
+          SetEnabled(SpriteRenderer,false,Luca2Image)@2;
+
+          Audio(QuestEntryComplete)'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 18
