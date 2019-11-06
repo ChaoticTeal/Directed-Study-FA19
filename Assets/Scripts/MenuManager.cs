@@ -26,18 +26,26 @@ public class MenuManager : MonoBehaviour
     private Selectable buttonToSelect;
 
     /// <summary>
-    /// Loads the game
+    /// The scene to default to if no name is entered.
+    /// Scene 1 should always be the main game scene.
+    /// </summary>
+    private const int defaultGameScene = 1;
+
+    /// <summary>
+    /// Loads the game.
+    /// Called from a button in-editor.
     /// </summary>
     public void StartButton()
     {
         if (nextScene != "")
             UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
         else
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(defaultGameScene);
     }
 
     /// <summary>
-    /// Quits the game
+    /// Quits the game.
+    /// Called from a button in-editor.
     /// </summary>
     public void QuitButton()
     {
@@ -49,7 +57,8 @@ public class MenuManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Switches to the credits panel
+    /// Switches to the credits panel.
+    /// Called from a button in-editor.
     /// </summary>
     public void CreditsButton()
     {
@@ -60,7 +69,8 @@ public class MenuManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Switches to the main menu panel
+    /// Switches to the main menu panel.
+    /// Called from a button in-editor.
     /// </summary>
     public void BackButton()
     {

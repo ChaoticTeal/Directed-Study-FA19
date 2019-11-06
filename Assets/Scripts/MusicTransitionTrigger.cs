@@ -6,15 +6,21 @@ public class MusicTransitionTrigger : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("The music to trigger when the player enters.")]
-    private MusicManager.CurrentMusic musicToTrigger;
-
-    [SerializeField]
-    [Tooltip("The MusicManager in the scene.")]
-    private MusicManager musicManager;
+    private MusicManager.MusicType musicToTrigger;
 
     [SerializeField]
     [Tooltip("The player tag.")]
     private string playerTag = "Player";
+
+    /// <summary>
+    /// The MusicManager in the scene
+    /// </summary>
+    private MusicManager musicManager;
+
+    private void Awake()
+    {
+        musicManager = FindObjectOfType<MusicManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

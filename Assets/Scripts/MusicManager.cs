@@ -18,7 +18,7 @@ public class MusicManager : MonoBehaviour
     /// <summary>
     /// Which theme should currently be playing?
     /// </summary>
-    public enum CurrentMusic { Town, Cave, Forest, Castle };
+    public enum MusicType { Town, Cave, Forest, Castle };
 
     [SerializeField]
     [Tooltip("Music to play while in Gratia proper.")]
@@ -41,12 +41,8 @@ public class MusicManager : MonoBehaviour
     private float musicFadeSeconds = 0.25f;
 
     [SerializeField]
-    [Tooltip("Margin for fading.")]
+    [Tooltip("How close to the target does the fade need to be to be complete?")]
     private float fadeMargin = 0.1f;
-
-    [SerializeField]
-    [Tooltip("Completed quest count variable (Dialogue System).")]
-    private string completedQuestsName;
 
     /// <summary>
     /// How many quests has the player completed?
@@ -62,37 +58,33 @@ public class MusicManager : MonoBehaviour
             {
                 case TownMusicState.Cursed:
                     if (QuestsCompleted >= 2)
-                        isMusicFading = true;
+                        BeginMusicFade();
                     break;
                 case TownMusicState.Dreary:
-                    if(QuestsCompleted >= 5)
-                        isMusicFading = true;
+                    if (QuestsCompleted >= 5)
+                        BeginMusicFade();
                     break;
                 case TownMusicState.Light:
-                    if(QuestsCompleted >= 12)
-                        isMusicFading = true;
+                    if (QuestsCompleted >= 12)
+                        BeginMusicFade();
                     break;
             }
-            if(isMusicFading)
+            if(isVolumeChanging)
             {
-                isFadingOut = true;
                 currentMusicState++;
-                fadeStartTime = Time.time;
             }
         }
     }
 
-    private CurrentMusic CurrentlyPlayingMusic
+    private MusicType CurrentMusic
     {
-        get { return currentlyPlayingMusic_UseProperty; }
+        get { return currentMusic_UseProperty; }
         set
         {
-            if(value != currentlyPlayingMusic_UseProperty)
+            if(value != currentMusic_UseProperty)
             {
-                isMusicFading = true;
-                isFadingOut = true;
-                fadeStartTime = Time.time;
-                currentlyPlayingMusic_UseProperty = value;
+                BeginMusicFade();
+                currentMusic_UseProperty = value;
             }
         }
     }
@@ -105,7 +97,7 @@ public class MusicManager : MonoBehaviour
     /// <summary>
     /// CurrentMusic variable for use with property
     /// </summary>
-    private CurrentMusic currentlyPlayingMusic_UseProperty;
+    private MusicType currentMusic_UseProperty;
 
     /// <summary>
     /// The AudioSource component attached to the object
@@ -113,9 +105,9 @@ public class MusicManager : MonoBehaviour
     private AudioSource audioSource;
 
     /// <summary>
-    /// Is the music fading?
+    /// Is the volume currently changing?
     /// </summary>
-    private bool isMusicFading;
+    private bool isVolumeChanging;
 
     /// <summary>
     /// Is the music fading out?
@@ -137,6 +129,11 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     private TownMusicState currentMusicState = TownMusicState.Cursed;
 
+    /// <summary>
+    /// Quests completed variable (DialogueSystem)
+    /// </summary>
+    private string completedQuestsName = "QuestsCompleted";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -148,7 +145,7 @@ public class MusicManager : MonoBehaviour
     void Update()
     {
         CheckQuestsCompleted();
-        if (isMusicFading)
+        if (isVolumeChanging)
             FadeMusic();
     }
 
@@ -160,6 +157,16 @@ public class MusicManager : MonoBehaviour
         int dialogueQuests = DialogueLua.GetVariable(completedQuestsName).AsInt;
         if (dialogueQuests > QuestsCompleted)
             QuestsCompleted = dialogueQuests;
+    }
+
+    /// <summary>
+    /// Sets variables to start fading the music
+    /// </summary>
+    private void BeginMusicFade()
+    {
+        isVolumeChanging = true;
+        isFadingOut = true;
+        fadeStartTime = Time.time;
     }
 
     /// <summary>
@@ -182,7 +189,7 @@ public class MusicManager : MonoBehaviour
             if(audioSource.volume >= startingVolume - fadeMargin)
             {
                 audioSource.volume = startingVolume;
-                isMusicFading = false;
+                isVolumeChanging = false;
             }
         }
     }
@@ -192,18 +199,18 @@ public class MusicManager : MonoBehaviour
     /// </summary>
     private void SetNewTrack()
     {
-        switch (CurrentlyPlayingMusic)
+        switch (CurrentMusic)
         {
-            case CurrentMusic.Town:
+            case MusicType.Town:
                 audioSource.clip = townMusic[(int)currentMusicState];
                 break;
-            case CurrentMusic.Cave:
+            case MusicType.Cave:
                 audioSource.clip = caveMusic;
                 break;
-            case CurrentMusic.Forest:
+            case MusicType.Forest:
                 audioSource.clip = forestMusic;
                 break;
-            case CurrentMusic.Castle:
+            case MusicType.Castle:
                 audioSource.clip = castleMusic;
                 break;
         }
@@ -212,11 +219,12 @@ public class MusicManager : MonoBehaviour
 
     /// <summary>
     /// Set the music when the player enters a particular area
+    /// Called by MusicTransitionTriggers' OnTriggerEnter2D function
     /// </summary>
     /// <param name="music">The new music to start</param>
-    public void SetMusicOnTriggerEnter(CurrentMusic music)
+    public void SetMusicOnTriggerEnter(MusicType music)
     {
-        CurrentlyPlayingMusic = music;
+        CurrentMusic = music;
     }
 }
 
