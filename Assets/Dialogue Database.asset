@@ -289,6 +289,10 @@ MonoBehaviour:
       value: Return to the skeleton to let them know you've spoken to everyone.
       type: 0
       typeString: CustomFieldType_Text
+    - title: Group
+      value: Secondary
+      type: 0
+      typeString: 
   - id: 2
     fields:
     - title: Name
@@ -354,10 +358,14 @@ MonoBehaviour:
       value: Find the Missing Ghost
       type: 0
       typeString: 
+    - title: Group
+      value: Secondary
+      type: 0
+      typeString: 
   - id: 3
     fields:
     - title: Name
-      value: Make Introductions
+      value: 1. Make Introductions
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -386,10 +394,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Group
-      value: Primary
-      type: 0
-      typeString: CustomFieldType_Text
     - title: Trackable
       value: True
       type: 2
@@ -418,10 +422,14 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   - id: 4
     fields:
     - title: Name
-      value: For Want of a Hammer
+      value: 2. For Want of a Hammer
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -450,10 +458,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Group
-      value: Primary
-      type: 0
-      typeString: 
     - title: Trackable
       value: True
       type: 2
@@ -490,10 +494,14 @@ MonoBehaviour:
       value: The bridge is fixed! Report back to Calcaneus.
       type: 0
       typeString: 
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   - id: 5
     fields:
     - title: Name
-      value: Findings for Bindings
+      value: 3. Findings for Bindings
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -552,11 +560,11 @@ MonoBehaviour:
     - title: Group
       value: Primary
       type: 0
-      typeString: CustomFieldType_Text
+      typeString: 
   - id: 6
     fields:
     - title: Name
-      value: Peat Pigmentation
+      value: 4. Peat Pigmentation
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -584,10 +592,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Group
-      value: Primary
-      type: 0
-      typeString: CustomFieldType_Text
     - title: Entry Count
       value: 2
       type: 1
@@ -616,10 +620,14 @@ MonoBehaviour:
       value: Bring the soil back to Silq.
       type: 0
       typeString: 
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   - id: 7
     fields:
     - title: Name
-      value: Secret of the Forest Grove
+      value: 5. Secret of the Forest Grove
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -647,10 +655,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Group
-      value: Primary
-      type: 0
-      typeString: 
     - title: Trackable
       value: True
       type: 2
@@ -680,10 +684,14 @@ MonoBehaviour:
       value: Return to Calcaneus to discuss Luca's actions.
       type: 0
       typeString: 
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   - id: 8
     fields:
     - title: Name
-      value: Gratia's Curse
+      value: 6. Gratia's Curse
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -711,10 +719,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Group
-      value: Primary
-      type: 0
-      typeString: 
     - title: Trackable
       value: True
       type: 2
@@ -759,10 +763,14 @@ MonoBehaviour:
       value: Tell Calcaneus that the curse is broken.
       type: 0
       typeString: 
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   - id: 9
     fields:
     - title: Name
-      value: Your Work Here is Done
+      value: 7. Your Work Here is Done
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -790,10 +798,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    - title: Group
-      value: Primary
-      type: 0
-      typeString: 
     - title: Trackable
       value: True
       type: 2
@@ -814,6 +818,10 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Group
+      value: Primary
+      type: 0
+      typeString: 
   locations: []
   variables:
   - id: 1
