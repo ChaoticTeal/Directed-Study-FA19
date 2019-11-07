@@ -426,6 +426,10 @@ MonoBehaviour:
       value: Primary
       type: 0
       typeString: 
+    - title: Display Name
+      value: Make Introductions
+      type: 0
+      typeString: 
   - id: 4
     fields:
     - title: Name
@@ -498,6 +502,10 @@ MonoBehaviour:
       value: Primary
       type: 0
       typeString: 
+    - title: Display Name
+      value: For Want of a Hammer
+      type: 0
+      typeString: 
   - id: 5
     fields:
     - title: Name
@@ -559,6 +567,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Text
     - title: Group
       value: Primary
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Findings for Bindings
       type: 0
       typeString: 
   - id: 6
@@ -624,6 +636,10 @@ MonoBehaviour:
       value: Primary
       type: 0
       typeString: 
+    - title: Display Name
+      value: Peat Pigmentation
+      type: 0
+      typeString: 
   - id: 7
     fields:
     - title: Name
@@ -682,6 +698,10 @@ MonoBehaviour:
       typeString: 
     - title: Entry 2
       value: Return to Calcaneus to discuss Luca's actions.
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Secret of the Forest Grove
       type: 0
       typeString: 
     - title: Group
@@ -767,6 +787,10 @@ MonoBehaviour:
       value: Primary
       type: 0
       typeString: 
+    - title: Display Name
+      value: Gratia's Curse
+      type: 0
+      typeString: 
   - id: 9
     fields:
     - title: Name
@@ -820,6 +844,10 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Group
       value: Primary
+      type: 0
+      typeString: 
+    - title: Display Name
+      value: Your Work Here is Done
       type: 0
       typeString: 
   locations: []
@@ -5030,7 +5058,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Make Introductions") == "unassigned"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5465,9 +5493,11 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("Make Introductions", "active");
+      userScript: 'SetQuestState("1. Make Introductions", "active");
 
-        SetQuestEntryState("Make Introductions", 1, "active")'
+        SetQuestEntryState("1. Make Introductions", 1, "active")
+
+        Variable["Alert"] = "Press Q to open the Quest Log."'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5539,7 +5569,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Make Introductions") == "active"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5691,7 +5721,7 @@ MonoBehaviour:
         destinationDialogueID: 28
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestEntryState("Make Introductions", 2) == "active")
+      conditionsString: (CurrentQuestEntryState("1. Make Introductions", 2) == "active")
         and (Variable["VillagersMet"] >= 3)
       userScript: 
       onExecute:
@@ -5767,9 +5797,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestEntryState("Make Introductions", 2, "success");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 2, "success");
 
-        SetQuestState("Make Introductions", "success");
+        SetQuestState("1. Make Introductions", "success");
 
         Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
@@ -6197,9 +6227,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("For Want of a Hammer", "active");
+      userScript: 'SetQuestState("2. For Want of a Hammer", "active");
 
-        SetQuestEntryState("For Want of a Hammer", 1, "active")'
+        SetQuestEntryState("2. For Want of a Hammer", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6277,7 +6307,7 @@ MonoBehaviour:
         destinationDialogueID: 24
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("For Want of a Hammer") == "active"
+      conditionsString: CurrentQuestState("2. For Want of a Hammer") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6356,7 +6386,7 @@ MonoBehaviour:
         destinationDialogueID: 21
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 3) == "unassigned"
+      conditionsString: CurrentQuestEntryState("2. For Want of a Hammer", 3) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6429,7 +6459,7 @@ MonoBehaviour:
         destinationDialogueID: 23
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 1) == "success"
+      conditionsString: CurrentQuestEntryState("2. For Want of a Hammer", 1) == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6709,7 +6739,7 @@ MonoBehaviour:
         destinationDialogueID: 25
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 3) == "active"
+      conditionsString: CurrentQuestEntryState("2. For Want of a Hammer", 3) == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -6778,12 +6808,12 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("For Want of a Hammer", "success"); SetQuestEntryState("For
-        Want of a Hammer", 3, "success");
+      userScript: 'SetQuestState("2. For Want of a Hammer", "success"); SetQuestEntryState("2.
+        For Want of a Hammer", 3, "success");
 
-        SetQuestState("Findings for Bindings", "unassigned");
+        SetQuestState("3. Findings for Bindings", "unassigned");
 
-        SetQuestEntryState("Findings for Bindings", 1, "unassigned");
+        SetQuestEntryState("3. Findings for Bindings", 1, "unassigned");
 
         Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1;
 
@@ -7090,8 +7120,8 @@ MonoBehaviour:
         destinationDialogueID: 30
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Secret of the Forest Grove", 2) ==
-        "active"
+      conditionsString: CurrentQuestEntryState("5. Secret of the Forest Grove", 2)
+        == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -7385,9 +7415,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestEntryState("Secret of the Forest Grove", 2, "success");
+      userScript: 'SetQuestEntryState("5. Secret of the Forest Grove", 2, "success");
 
-        SetQuestState("Secret of the Forest Grove", "success")'
+        SetQuestState("5. Secret of the Forest Grove", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8053,9 +8083,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Gratia''s Curse", "active");
+      userScript: 'SetQuestState("6. Gratia''s Curse", "active");
 
-        SetQuestEntryState("Gratia''s Curse", 1, "active");
+        SetQuestEntryState("6. Gratia''s Curse", 1, "active");
 
         Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
@@ -8129,7 +8159,7 @@ MonoBehaviour:
         destinationDialogueID: 44
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Gratia's Curse", 4) == "active"
+      conditionsString: CurrentQuestEntryState("6. Gratia's Curse", 4) == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8203,9 +8233,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["QuestsCompleted"] < 12
-      userScript: 'SetQuestEntryState("Gratia''s Curse", 4, "success");
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 4, "success");
 
-        SetQuestState("Gratia''s Curse", "success")'
+        SetQuestState("6. Gratia''s Curse", "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8722,9 +8752,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Your Work Here is Done", "active");
+      userScript: 'SetQuestState("7. Your Work Here is Done", "active");
 
-        SetQuestEntryState("Your Work Here is Done", 1, "active")'
+        SetQuestEntryState("7. Your Work Here is Done", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8870,7 +8900,7 @@ MonoBehaviour:
         destinationDialogueID: 63
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Your Work Here is Done") == "active"
+      conditionsString: CurrentQuestState("7. Your Work Here is Done") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9663,7 +9693,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Findings for Bindings") == "active"
+      conditionsString: CurrentQuestState("3. Findings for Bindings") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9731,7 +9761,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Peat Pigmentation") == "active"
+      conditionsString: CurrentQuestState("4. Peat Pigmentation") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9799,7 +9829,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Gratia's Curse") == "active"
+      conditionsString: CurrentQuestState("6. Gratia's Curse") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9879,7 +9909,7 @@ MonoBehaviour:
         y: 499.93762
         width: 160
         height: 30
-    canvasScrollPosition: {x: 680.4508, y: 72.85712}
+    canvasScrollPosition: {x: 558.57117, y: 41.428596}
     canvasZoom: 0.7000003
   - id: 8
     fields:
@@ -10086,7 +10116,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Make Introductions") == "unassigned"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10226,8 +10256,8 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Make Introductions") == "active" and (Variable["HasMetWisp"]
-        == false)
+      conditionsString: CurrentQuestState("1. Make Introductions") == "active" and
+        (Variable["HasMetWisp"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10449,7 +10479,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: 'SetQuestEntryState("Make Introductions", 1, "active");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 1, "active");
 
         Actor["Wisp"].Display_Name = "Wisp"'
       onExecute:
@@ -10676,9 +10706,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] >= 3
-      userScript: 'SetQuestEntryState("Make Introductions", 1, "success");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 1, "success");
 
-        SetQuestEntryState("Make Introductions", 2, "active");
+        SetQuestEntryState("1. Make Introductions", 2, "active");
 
         Actor["Wisp"].Display_Name = "Wisp"'
       onExecute:
@@ -10825,8 +10855,8 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestState("Findings for Bindings") == "unassigned")
-        and (CurrentQuestState("For Want of a Hammer") == "success")
+      conditionsString: (CurrentQuestState("3. Findings for Bindings") == "unassigned")
+        and (CurrentQuestState("2. For Want of a Hammer") == "success")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11114,9 +11144,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("Findings for Bindings", "active");
+      userScript: 'SetQuestState("3. Findings for Bindings", "active");
 
-        SetQuestEntryState("Findings for Bindings", 1, "active")'
+        SetQuestEntryState("3. Findings for Bindings", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11188,7 +11218,7 @@ MonoBehaviour:
         destinationDialogueID: 17
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Findings for Bindings") == "active"
+      conditionsString: CurrentQuestState("3. Findings for Bindings") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11340,7 +11370,7 @@ MonoBehaviour:
         destinationDialogueID: 19
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Findings for Bindings", 2) == "active"
+      conditionsString: CurrentQuestEntryState("3. Findings for Bindings", 2) == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -11418,13 +11448,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestEntryState("Findings for Bindings", 2, "success");
+      userScript: 'SetQuestEntryState("3. Findings for Bindings", 2, "success");
 
-        SetQuestState("Findings for Bindings", "success");
+        SetQuestState("3. Findings for Bindings", "success");
 
-        SetQuestState("Peat Pigmentation", "unassigned");
+        SetQuestState("4. Peat Pigmentation", "unassigned");
 
-        SetQuestEntryState("Peat Pigmentation", 1, "unassigned");
+        SetQuestEntryState("4. Peat Pigmentation", 1, "unassigned");
 
         Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
@@ -11789,7 +11819,7 @@ MonoBehaviour:
         destinationDialogueID: 34
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Your Work Here is Done") == "active"
+      conditionsString: CurrentQuestState("7. Your Work Here is Done") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12578,7 +12608,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Findings for Bindings") == "success"
+      conditionsString: CurrentQuestState("3. Findings for Bindings") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12646,7 +12676,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Secret of the Forest Grove") == "active"
+      conditionsString: CurrentQuestState("5. Secret of the Forest Grove") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12715,7 +12745,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Gratia's Curse") == "active"
+      conditionsString: CurrentQuestState("6. Gratia's Curse") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12929,7 +12959,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Make Introductions") == "unassigned"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13069,7 +13099,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestState("Make Introductions") == "active") and
+      conditionsString: (CurrentQuestState("1. Make Introductions") == "active") and
         (Variable["HasMetLuca"] == false)
       userScript: 
       onExecute:
@@ -13293,7 +13323,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: 'SetQuestEntryState("Make Introductions", 1, "active");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 1, "active");
 
         Actor["Luca"].Display_Name = "Luca"'
       onExecute:
@@ -13363,9 +13393,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] >= 3
-      userScript: 'SetQuestEntryState("Make Introductions", 1, "success");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 1, "success");
 
-        SetQuestEntryState("Make Introductions", 2, "active");
+        SetQuestEntryState("1. Make Introductions", 2, "active");
 
         Actor["Luca"].Display_Name = "Luca"'
       onExecute:
@@ -13591,8 +13621,8 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestState("Peat Pigmentation") == "success") and
-        (CurrentQuestState("Secret of the Forest Grove") == "unassigned")
+      conditionsString: (CurrentQuestState("4. Peat Pigmentation") == "success") and
+        (CurrentQuestState("5. Secret of the Forest Grove") == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13814,7 +13844,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetQuestState("Secret of the Forest Grove", "active");
+      userScript: SetQuestState("5. Secret of the Forest Grove", "active");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14100,7 +14130,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestEntryState("Secret of the Forest Grove", 1, "active")
+      userScript: SetQuestEntryState("5. Secret of the Forest Grove", 1, "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14178,7 +14208,7 @@ MonoBehaviour:
         destinationDialogueID: 26
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Your Work Here is Done") == "active"
+      conditionsString: CurrentQuestState("7. Your Work Here is Done") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14818,7 +14848,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Make Introductions") == "success"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14886,7 +14916,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Secret of the Forest Grove") == "success"
+      conditionsString: CurrentQuestState("5. Secret of the Forest Grove") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15106,7 +15136,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Make Introductions") == "unassigned"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15247,7 +15277,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestState("Make Introductions") == "active") and
+      conditionsString: (CurrentQuestState("1. Make Introductions") == "active") and
         (Variable["HasMetSilq"] == false)
       userScript: 
       onExecute:
@@ -15471,7 +15501,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] < 3
-      userScript: 'SetQuestEntryState("Make Introductions", 1, "active");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 1, "active");
 
         Actor["Silq"].Display_Name = "Silq"'
       onExecute:
@@ -15541,9 +15571,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["VillagersMet"] >= 3
-      userScript: 'SetQuestEntryState("Make Introductions", 2, "active");
+      userScript: 'SetQuestEntryState("1. Make Introductions", 2, "active");
 
-        SetQuestEntryState("Make Introductions", 1, "success");
+        SetQuestEntryState("1. Make Introductions", 1, "success");
 
         Actor["Silq"].Display_Name = "Silq"'
       onExecute:
@@ -15775,8 +15805,8 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: (CurrentQuestState("Findings for Bindings") == "success")
-        and (CurrentQuestState("Peat Pigmentation") == "unassigned")
+      conditionsString: (CurrentQuestState("3. Findings for Bindings") == "success")
+        and (CurrentQuestState("4. Peat Pigmentation") == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16072,9 +16102,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Peat Pigmentation", "active");
+      userScript: 'SetQuestState("4. Peat Pigmentation", "active");
 
-        SetQuestEntryState("Peat Pigmentation", 1, "active")'
+        SetQuestEntryState("4. Peat Pigmentation", 1, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16146,7 +16176,7 @@ MonoBehaviour:
         destinationDialogueID: 16
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Peat Pigmentation") == "active"
+      conditionsString: CurrentQuestState("4. Peat Pigmentation") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16298,7 +16328,7 @@ MonoBehaviour:
         destinationDialogueID: 20
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Peat Pigmentation", 2) == "active"
+      conditionsString: CurrentQuestEntryState("4. Peat Pigmentation", 2) == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16516,13 +16546,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("Peat Pigmentation", "success");
+      userScript: 'SetQuestState("4. Peat Pigmentation", "success");
 
-        SetQuestEntryState("Peat Pigmentation", 2, "success");
+        SetQuestEntryState("4. Peat Pigmentation", 2, "success");
 
-        SetQuestState("Secret of the Forest Grove", "unassigned");
+        SetQuestState("5. Secret of the Forest Grove", "unassigned");
 
-        SetQuestEntryState("Secret of the Forest Grove", 1, "unassigned");
+        SetQuestEntryState("5. Secret of the Forest Grove", 1, "unassigned");
 
         Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
@@ -16813,7 +16843,7 @@ MonoBehaviour:
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Your Work Here is Done") == "active"
+      conditionsString: CurrentQuestState("7. Your Work Here is Done") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17679,7 +17709,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Make Introductions") == "success"
+      conditionsString: CurrentQuestState("1. Make Introductions") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17747,7 +17777,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Peat Pigmentation") == "success"
+      conditionsString: CurrentQuestState("4. Peat Pigmentation") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17816,7 +17846,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("Gratia's Curse") == "active"
+      conditionsString: CurrentQuestState("6. Gratia's Curse") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18006,10 +18036,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 1) == "active"
-      userScript: 'SetQuestEntryState("For Want of a Hammer", 2, "active");
+      conditionsString: CurrentQuestEntryState("2. For Want of a Hammer", 1) == "active"
+      userScript: 'SetQuestEntryState("2. For Want of a Hammer", 2, "active");
 
-        SetQuestEntryState("For Want of a Hammer", 1, "success")'
+        SetQuestEntryState("2. For Want of a Hammer", 1, "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18075,7 +18105,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 1) == "success"
+      conditionsString: CurrentQuestEntryState("2. For Want of a Hammer", 1) == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18266,7 +18296,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("For Want of a Hammer", 2) == "unassigned"
+      conditionsString: CurrentQuestEntryState("2. For Want of a Hammer", 2) == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -18423,9 +18453,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestEntryState("For Want of a Hammer", 2, "success");
+      userScript: 'SetQuestEntryState("2. For Want of a Hammer", 2, "success");
 
-        SetQuestEntryState("For Want of a Hammer", 3, "active")'
+        SetQuestEntryState("2. For Want of a Hammer", 3, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18614,10 +18644,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("Findings for Bindings", 1) == "active"
-      userScript: 'SetQuestEntryState("Findings for Bindings", 1, "success");
+      conditionsString: CurrentQuestEntryState("3. Findings for Bindings", 1) == "active"
+      userScript: 'SetQuestEntryState("3. Findings for Bindings", 1, "success");
 
-        SetQuestEntryState("Findings for Bindings", 2, "active")'
+        SetQuestEntryState("3. Findings for Bindings", 2, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18683,7 +18713,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("Findings for Bindings", 1) == "success"
+      conditionsString: CurrentQuestEntryState("3. Findings for Bindings", 1) == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19242,10 +19272,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("Peat Pigmentation", 1) == "active"
-      userScript: 'SetQuestEntryState("Peat Pigmentation", 1, "success");
+      conditionsString: CurrentQuestEntryState("4. Peat Pigmentation", 1) == "active"
+      userScript: 'SetQuestEntryState("4. Peat Pigmentation", 1, "success");
 
-        SetQuestEntryState("Peat Pigmentation", 2, "active")'
+        SetQuestEntryState("4. Peat Pigmentation", 2, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19311,7 +19341,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("Peat Pigmentation", 1) == "success"
+      conditionsString: CurrentQuestEntryState("4. Peat Pigmentation", 1) == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19697,8 +19727,8 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestEntryState("Secret of the Forest Grove", 1) ==
-        "active"
+      conditionsString: CurrentQuestEntryState("5. Secret of the Forest Grove", 1)
+        == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19765,8 +19795,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestEntryState("Secret of the Forest Grove", 1) ==
-        "success"
+      conditionsString: CurrentQuestEntryState("5. Secret of the Forest Grove", 1)
+        == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -19914,9 +19944,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestEntryState("Secret of the Forest Grove", 1, "success");
+      userScript: 'SetQuestEntryState("5. Secret of the Forest Grove", 1, "success");
 
-        SetQuestEntryState("Secret of the Forest Grove", 2, "active")'
+        SetQuestEntryState("5. Secret of the Forest Grove", 2, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20106,7 +20136,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("Gratia's Curse") == "active"
+      conditionsString: CurrentQuestState("6. Gratia's Curse") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -20409,11 +20439,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestEntryState("Gratia''s Curse", 3, "success");
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 3, "success");
 
         Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1;
 
-        SetQuestEntryState("Gratia''s Curse", 4, "active")'
+        SetQuestEntryState("6. Gratia''s Curse", 4, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21815,7 +21845,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("For Want of a Hammer") == "active"
+      conditionsString: CurrentQuestState("2. For Want of a Hammer") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21883,8 +21913,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: (CurrentQuestState("Findings for Bindings") == "unassigned")
-        and (CurrentQuestState("For Want of a Hammer") == "success")
+      conditionsString: (CurrentQuestState("3. Findings for Bindings") == "unassigned")
+        and (CurrentQuestState("2. For Want of a Hammer") == "success")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -23638,9 +23668,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["StatueChallengesCompleted"] >= 4
-      userScript: 'SetQuestEntryState("Gratia''s Curse", 2, "success");
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 2, "success");
 
-        SetQuestEntryState("Gratia''s Curse", 3, "active")'
+        SetQuestEntryState("6. Gratia''s Curse", 3, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25329,9 +25359,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["StatueChallengesCompleted"] >= 4
-      userScript: 'SetQuestEntryState("Gratia''s Curse", 2, "success");
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 2, "success");
 
-        SetQuestEntryState("Gratia''s Curse", 3, "active")'
+        SetQuestEntryState("6. Gratia''s Curse", 3, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -27087,9 +27117,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["StatueChallengesCompleted"] >= 4
-      userScript: 'SetQuestEntryState("Gratia''s Curse", 2, "success");
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 2, "success");
 
-        SetQuestEntryState("Gratia''s Curse", 3, "active")'
+        SetQuestEntryState("6. Gratia''s Curse", 3, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -28844,9 +28874,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["StatueChallengesCompleted"] >= 4
-      userScript: 'SetQuestEntryState("Gratia''s Curse", 2, "success");
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 2, "success");
 
-        SetQuestEntryState("Gratia''s Curse", 3, "active")'
+        SetQuestEntryState("6. Gratia''s Curse", 3, "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
