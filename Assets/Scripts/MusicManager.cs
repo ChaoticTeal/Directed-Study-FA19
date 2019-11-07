@@ -25,6 +25,10 @@ public class MusicManager : MonoBehaviour
     private List<AudioClip> townMusic;
 
     [SerializeField]
+    [Tooltip("Quest completion threshold for each track.")]
+    private List<int> townQuestThresholds;
+
+    [SerializeField]
     [Tooltip("Music to play in the cave.")]
     private AudioClip caveMusic;
 
@@ -54,31 +58,18 @@ public class MusicManager : MonoBehaviour
         set
         {
             questsCompleted_UseProperty = value;
-            switch(currentMusicState)
+            if (QuestsCompleted >= townQuestThresholds[(int)currentMusicState] &&
+                currentMusicState < TownMusicState.Cheery)
             {
-                case TownMusicState.Cursed:
-                    if (QuestsCompleted >= 2)
-                        BeginMusicFade();
-                    break;
-                case TownMusicState.Dreary:
-                    if (QuestsCompleted >= 5)
-                        BeginMusicFade();
-                    break;
-                case TownMusicState.Light:
-                    if (QuestsCompleted >= 12)
-                        BeginMusicFade();
-                    break;
-            }
-            if(isVolumeChanging)
-            {
+                BeginMusicFade();
                 currentMusicState++;
             }
         }
     }
 
-    private MusicType CurrentMusic
+    public MusicType CurrentMusic
     {
-        get { return currentMusic_UseProperty; }
+        private get { return currentMusic_UseProperty; }
         set
         {
             if(value != currentMusic_UseProperty)
@@ -215,16 +206,6 @@ public class MusicManager : MonoBehaviour
                 break;
         }
         audioSource.Play();
-    }
-
-    /// <summary>
-    /// Set the music when the player enters a particular area
-    /// Called by MusicTransitionTriggers' OnTriggerEnter2D function
-    /// </summary>
-    /// <param name="music">The new music to start</param>
-    public void SetMusicOnTriggerEnter(MusicType music)
-    {
-        CurrentMusic = music;
     }
 }
 
