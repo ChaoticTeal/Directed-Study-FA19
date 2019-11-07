@@ -810,6 +810,10 @@ MonoBehaviour:
       value: Leave the village through the valley to the south.
       type: 0
       typeString: 
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
   locations: []
   variables:
   - id: 1
@@ -6773,7 +6777,9 @@ MonoBehaviour:
 
         SetQuestEntryState("Findings for Bindings", 1, "unassigned");
 
-        Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
+        Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1;
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
