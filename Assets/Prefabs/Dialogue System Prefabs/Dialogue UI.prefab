@@ -1694,8 +1694,8 @@ MonoBehaviour:
   silentCharacters: ?!.:,-
   fullPauseCharacters: .:?!
   quarterPauseCharacters: ',;-'
-  fullPauseDuration: 0.75
-  quarterPauseDuration: 0.25
+  fullPauseDuration: 0.5
+  quarterPauseDuration: 0.15
   removeDuplicateTypewriterEffects: 1
   playOnEnable: 0
   waitOneFrameBeforeStarting: 0
