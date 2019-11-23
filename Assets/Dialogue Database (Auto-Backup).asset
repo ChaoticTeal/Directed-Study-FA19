@@ -8788,7 +8788,7 @@ MonoBehaviour:
         destinationDialogueID: 45
         isConnector: 0
         priority: 2
-      conditionsString: Variable["QuestsCompleted"] < 12
+      conditionsString: 
       userScript: 'SetQuestEntryState("6. Gratia''s Curse", 4, "success");
 
         SetQuestState("6. Gratia''s Curse", "success");
@@ -13678,8 +13678,8 @@ MonoBehaviour:
         y: 96.50003
         width: 160
         height: 30
-    canvasScrollPosition: {x: 647.99603, y: 49.745483}
-    canvasZoom: 0.4000002
+    canvasScrollPosition: {x: 982.4994, y: 19.303253}
+    canvasZoom: 0.6100002
   - id: 8
     fields:
     - title: Title
@@ -19898,13 +19898,13 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 82
         destinationConversationID: 8
-        destinationDialogueID: 83
+        destinationDialogueID: 85
         isConnector: 0
         priority: 2
       - originConversationID: 8
         originDialogueID: 82
         destinationConversationID: 8
-        destinationDialogueID: 85
+        destinationDialogueID: 83
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("A2. Ghost Writer Indecisive") == "success"
@@ -20203,8 +20203,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 2684.5256
-        y: 175.76274
+        x: 2686.165
+        y: 177.40208
         width: 160
         height: 30
     - id: 87
@@ -20234,8 +20234,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Well... E-even before the curse, Calcaneus was always pretty grumpy...They're
-          a s-sullen sort, I suppose...
+        value: Well... Calcaneus is a little bit g-grumpy... but they're also incredibly
+          wise.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20308,8 +20308,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: But d-don't get me wrong! They're always looking out for everyone.
-          They care a lot about the village, they have for as long as I've lived here.
+        value: They're always looking out for e-everyone. They care a lot about the
+          village, and they have f-for as long as I've lived here.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -20785,8 +20785,8 @@ MonoBehaviour:
         y: 112.315765
         width: 160
         height: 30
-    canvasScrollPosition: {x: 5.261017, y: 4.0892334}
-    canvasZoom: 0.4000002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.4900001
   - id: 9
     fields:
     - title: Title
@@ -23789,7 +23789,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("B1. The Grove Thickens", "success");
 
-        SetQuestEntryState("B1. The Grove Thickens", 2, "success")'
+        SetQuestEntryState("B1. The Grove Thickens", 2, "success");
+
+        Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25842,7 +25844,7 @@ MonoBehaviour:
     - id: 68
       fields:
       - title: Title
-        value: New Dialogue Entry
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
@@ -25854,11 +25856,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -25866,7 +25868,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: See you around! Kee-hee!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -25893,7 +25895,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: (Variable["LucaGoodbye"] == true) and (Variable["QuestsCompleted"]
+        < 12)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -25902,11 +25905,11 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 895.4301
-        y: 104.79747
+        x: 840.2577
+        y: 108.24574
         width: 160
         height: 30
-    canvasScrollPosition: {x: 280.86163, y: 52.930946}
+    canvasScrollPosition: {x: 434.30975, y: 505.17215}
     canvasZoom: 0.5800003
   - id: 10
     fields:
@@ -30438,7 +30441,9 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestEntryState("C1. Pigment Progression", 2, "success");
 
-        SetQuestState("C1. Pigment Progression", "success")'
+        SetQuestState("C1. Pigment Progression", "success");
+
+        Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -32425,8 +32430,8 @@ MonoBehaviour:
         y: 120.396866
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 44.07652}
-    canvasZoom: 0.34000027
+    canvasScrollPosition: {x: 941.85986, y: 55.813934}
+    canvasZoom: 0.43000028
   - id: 11
     fields:
     - title: Title
@@ -34628,6 +34633,12 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 19
+        originDialogueID: 0
+        destinationConversationID: 19
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -34702,7 +34713,8 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("6. Gratia's Curse") == "active"
+      conditionsString: CurrentQuestState("6. Gratia's Curse") == "active" and (CurrentQuestEntryState("6.
+        Gratia's Curse", 4) == "unassigned")
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -35005,9 +35017,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 3, "success");
-
-        SetQuestEntryState("6. Gratia''s Curse", 4, "active")'
+      userScript: SetQuestEntryState("6. Gratia's Curse", 3, "success");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -35154,7 +35164,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestEntryState("6. Gratia's Curse", 4, "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -35166,7 +35176,74 @@ MonoBehaviour:
         y: 334.1096
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 135.2211}
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 10
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: It's a large, stone cauldron.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 19
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 247.39719
+        y: 84.10959
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 102.34439}
     canvasZoom: 0.73000026
   - id: 20
     fields:

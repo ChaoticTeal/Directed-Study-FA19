@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 11490894}
   - component: {fileID: 11453522}
   - component: {fileID: 11442258}
+  - component: {fileID: 791185823726555584}
   m_Layer: 5
   m_Name: Response Button Template
   m_TagString: Untagged
@@ -646,8 +647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 38}
+  m_AnchoredPosition: {x: 12, y: 0}
+  m_SizeDelta: {x: 621, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &22289812
 CanvasRenderer:
@@ -773,6 +774,20 @@ MonoBehaviour:
     m_uiText: {fileID: 11499110}
   setLabelColor: 1
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &791185823726555584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &133960
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,8 +988,8 @@ MonoBehaviour:
   explicitNavigationForTemplateButtons: 1
   loopExplicitNavigation: 0
   autonumber:
-    enabled: 1
-    regularNumberHotkeys: 1
+    enabled: 0
+    regularNumberHotkeys: 0
     numpadHotkeys: 0
     format: '{0}. {1}'
   onContentChanged:
@@ -2475,7 +2490,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Response Button
+  m_Text: Response Text
 --- !u!114 &11476742
 MonoBehaviour:
   m_ObjectHideFlags: 0
