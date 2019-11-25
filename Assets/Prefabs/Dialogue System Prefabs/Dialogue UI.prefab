@@ -973,8 +973,8 @@ MonoBehaviour:
   explicitNavigationForTemplateButtons: 1
   loopExplicitNavigation: 0
   autonumber:
-    enabled: 1
-    regularNumberHotkeys: 1
+    enabled: 0
+    regularNumberHotkeys: 0
     numpadHotkeys: 0
     format: '{0}. {1}'
   onContentChanged:
@@ -2475,7 +2475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Response Button
+  m_Text: Response Text
 --- !u!114 &11476742
 MonoBehaviour:
   m_ObjectHideFlags: 0
