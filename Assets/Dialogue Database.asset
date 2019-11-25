@@ -10444,8 +10444,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'It''s hardly the time for idle chatter. If you''ve forgotten how to
-          get to the castle, take the bridge to the south and '
+        value: It's hardly the time for idle chatter. If you've forgotten how to get
+          to the castle, take the bridge to the south, then go west.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -15129,8 +15129,8 @@ MonoBehaviour:
         y: 1542.2141
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 1136.9565}
-    canvasZoom: 0.45999998
+    canvasScrollPosition: {x: 1364.9142, y: 1213.2458}
+    canvasZoom: 0.42999998
   - id: 8
     fields:
     - title: Title
@@ -26122,7 +26122,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You took Calcaneus' tibia and kept them from an important meeting.
+        value: You took Calcaneus' tibia...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26268,7 +26268,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You destroyed one of Silq's works-in-progress and scattered the pieces.
+        value: You destroyed one of Silq's projects...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26414,7 +26414,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Wisp couldn't even talk to me about the tricks you've played on them.
+        value: Wisp couldn't even talk to me...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26560,8 +26560,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You need to learn not to make jokes at the expense of others... They
-          want to be friends with you, Luca.
+        value: You need to learn not to make jokes at others' expense.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26634,7 +26633,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Luca wants to be friends, too... Hm...
+        value: Luca wants to be friends...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26664,7 +26663,7 @@ MonoBehaviour:
       - originConversationID: 9
         originDialogueID: 54
         destinationConversationID: 9
-        destinationDialogueID: 55
+        destinationDialogueID: 77
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -26754,7 +26753,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1555.4323
-        y: 1609.6626
+        y: 1663.111
         width: 160
         height: 30
     - id: 56
@@ -27992,7 +27991,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1555.4323
-        y: 1659.6626
+        y: 1713.111
         width: 160
         height: 30
     - id: 73
@@ -28065,7 +28064,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1555.4323
-        y: 1709.6626
+        y: 1763.111
         width: 160
         height: 30
     - id: 74
@@ -28132,7 +28131,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1555.4323
-        y: 1759.6626
+        y: 1813.111
         width: 160
         height: 30
     - id: 75
@@ -28270,8 +28269,81 @@ MonoBehaviour:
         y: 515.4055
         width: 160
         height: 30
-    canvasScrollPosition: {x: 540.70355, y: 77.70386}
-    canvasZoom: 0.43000028
+    - id: 77
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: They want to be friends with you, too, Luca.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 77
+        destinationConversationID: 9
+        destinationDialogueID: 55
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 1555.4323
+        y: 1609.6626
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 708.9839, y: 1514.8206}
+    canvasZoom: 0.5800002
   - id: 10
     fields:
     - title: Title
