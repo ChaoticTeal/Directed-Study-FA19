@@ -7,9 +7,6 @@ public class MovePlayer : MonoBehaviour
 {
     #region SerializeFields
     [SerializeField]
-    [Tooltip("Duration, in seconds, of a slow movement (through sand, etc.).")]
-    private float slowMoveDuration = .75f;
-    [SerializeField]
     [Tooltip("Duration, in seconds, of a single movement.")]
     private float normalMoveDuration = .5f;
     [SerializeField]
@@ -21,22 +18,12 @@ public class MovePlayer : MonoBehaviour
     [SerializeField]
     [Tooltip("Layer(s) the player collides with when moving.")]
     private LayerMask collisionLayerMask;
-    [SerializeField]
-    [Tooltip("Layer that slows the player down when moving.")]
-    private LayerMask slowTerrainLayerMask;
-    [SerializeField]
-    [Tooltip("Tag of terrain that slows the player down when moving.")]
-    private string slowTerrainTag;
     #endregion
     
     /// <summary>
     /// The animator attached to the player
     /// </summary>
     private Animator playerAnimator;
-    /// <summary>
-    /// Is the player in slow terrain?
-    /// </summary>
-    private bool isInSlowTerrain;
     /// <summary>
     /// Is the movement coroutine currently running?
     /// </summary>
@@ -82,19 +69,11 @@ public class MovePlayer : MonoBehaviour
         if (isMoving)
         {
             if (Vector3.Distance(targetPosition, transform.position) > movementMargin)
-            {
-                float chosenMovementDuration = isInSlowTerrain ? slowMoveDuration : normalMoveDuration;
-                Move(chosenMovementDuration);
-            }
+                Move(normalMoveDuration);
             else
                 CleanUpMovement();
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    ToggleSlowMovement(collision);
-    //}
 
     /// <summary>
     /// Set variables and begin movement
@@ -104,7 +83,7 @@ public class MovePlayer : MonoBehaviour
         desiredMovementDirection = GetOneDimensionalMovementVector();
         isMovementBlocked = IsCollisionBlockingMovement(desiredMovementDirection);
         //isInSlowTerrain = IsEnteringSlowTerrain(desiredMovementDirection) || isInSlowTerrain;
-        PlayAnim(desiredMovementDirection, isInSlowTerrain, isMovementBlocked);
+        PlayAnim(desiredMovementDirection, isMovementBlocked);
         movementStartTime = Time.time;
         targetPosition = GetTargetPosition();
         if(!isMovementBlocked)
@@ -140,16 +119,6 @@ public class MovePlayer : MonoBehaviour
         return (Vector2)transform.position + desiredMovementDirection;
     }
 
-    ///// <summary>
-    ///// Toggles slow movement when crossing the border of slow terrain
-    ///// </summary>
-    ///// <param name="collision">The trigger collider the player crossed</param>
-    //private void ToggleSlowMovement(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == slowTerrainTag)
-    //        isInSlowTerrain = !isInSlowTerrain;
-    //}
-
     /// <summary>
     /// Gets player input
     /// </summary>
@@ -174,9 +143,8 @@ public class MovePlayer : MonoBehaviour
     /// <param name="movementVector">What direction is the player moving/facing?</param>
     /// <param name="slowTerrain">Is the player in slow terrain?</param>
     /// <param name="isMovementBlocked">Is the player able to move?</param>
-    private void PlayAnim(Vector2 movementVector, bool slowTerrain, bool isMovementBlocked)
+    private void PlayAnim(Vector2 movementVector, bool isMovementBlocked)
     {
-        playerAnimator.SetBool("Slow", slowTerrain);
         playerAnimator.SetBool("Idle", isMovementBlocked);
         if (movementVector == Vector2.down)
             playerAnimator.SetTrigger("Move Down");
@@ -197,18 +165,6 @@ public class MovePlayer : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(
             collisionRaycastOrigin.position, movementVector,
             1f, collisionLayerMask);
-        return hit.collider != null;
-    }
-
-    /// <summary>
-    /// Raycasts for slow terrain in the current direction before moving
-    /// </summary>
-    /// <returns>True if there is slow terrain in the way, else false.</returns>
-    private bool IsEnteringSlowTerrain(Vector2 movementVector)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(
-            collisionRaycastOrigin.position, movementVector, 
-            1f, slowTerrainLayerMask);
         return hit.collider != null;
     }
 

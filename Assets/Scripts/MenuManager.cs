@@ -31,6 +31,11 @@ public class MenuManager : MonoBehaviour
     /// </summary>
     private const int defaultGameScene = 1;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     /// <summary>
     /// Loads the game.
     /// Called from a button in-editor.
