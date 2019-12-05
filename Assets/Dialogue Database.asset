@@ -983,8 +983,8 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: Talk to the other villagers to get their support in talking some sense
-        into Luca. [var=LucaTestimoniesGathered]/3 talked to.
+      value: Get support from the others to talk some sense into Luca. [var=LucaTestimoniesGathered]/3
+        talked to.
       type: 0
       typeString: 
     - title: Entry 2 State
@@ -8465,9 +8465,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestEntryState("6. Gratia''s Curse", 4, "success");
 
-        SetQuestState("6. Gratia''s Curse", "success");
-
-        Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1;'
+        SetQuestState("6. Gratia''s Curse", "success");'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11855,7 +11853,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Silq's been asking your help with their shawls, hm? Yes, they started
+        value: Silq's been asking for your help with their shawls, hm? Yes, they started
           work on those a long time ago... Before the curse hit, if these old bones
           remember rightly.
         type: 0
@@ -15031,13 +15029,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetContinueMode(false);
 
-          Fade(stay, 1, #000000)@1;
+          Fade(stay, 1, #000000)@3;
 
-          LoadLevel(TitleMenu)@2;
+          LoadLevel(TitleMenu)@4;
 
-          Fade(in, 1, #000000)@3;
+          Fade(in, 1, #000000)@5;
 
-          SetContinueMode(true)@3;'
+          SetContinueMode(true)@5;'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 7
@@ -15129,8 +15127,8 @@ MonoBehaviour:
         y: 1542.2141
         width: 160
         height: 30
-    canvasScrollPosition: {x: 1364.9142, y: 1213.2458}
-    canvasZoom: 0.42999998
+    canvasScrollPosition: {x: 232.69226, y: 1184.6155}
+    canvasZoom: 0.52
   - id: 8
     fields:
     - title: Title
@@ -15523,7 +15521,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '...if only the bridge weren''t out, I could get to the woods and-'
+        value: '...if only the bridge weren''t out, I could get to the woods and-
+          W-who are you?'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -15553,7 +15552,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 4
         destinationConversationID: 8
-        destinationDialogueID: 10
+        destinationDialogueID: 5
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -15946,79 +15945,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 404.81592
         y: 340.04962
-        width: 160
-        height: 30
-    - id: 10
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: W-who are you?
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 10
-        destinationConversationID: 8
-        destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 407.08362
-        y: 241.78244
         width: 160
         height: 30
     - id: 11
@@ -17718,6 +17644,12 @@ MonoBehaviour:
         destinationDialogueID: 98
         isConnector: 0
         priority: 2
+      - originConversationID: 8
+        originDialogueID: 33
+        destinationConversationID: 8
+        destinationDialogueID: 99
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["WispGoodbye"] = true
       onExecute:
@@ -19330,7 +19262,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: I-if you're not sure where to go, the p-plant grows in the eastern
-          part of the cave...a l-little bit to the north
+          part of the cave...a l-little bit to the north.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -19858,7 +19790,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Now if I h-had more paper... a-and ink... I could...
+        value: Now if I h-had more paper... a-and ink... I could finally wri...
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -22544,7 +22476,75 @@ MonoBehaviour:
         y: 673.02954
         width: 160
         height: 30
-    canvasScrollPosition: {x: 1399.1177, y: 383.24658}
+    - id: 99
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: '[em1]I should say goodbye to Calcaneus before I leave.[/em1]'
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["LucaGoodbye"] == true) and (Variable["SilqGoodbye"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 2888.3486
+        y: 676.92303
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 1158.7329, y: 828.84607}
     canvasZoom: 0.52
   - id: 9
     fields:
@@ -24525,6 +24525,12 @@ MonoBehaviour:
         destinationDialogueID: 76
         isConnector: 0
         priority: 2
+      - originConversationID: 9
+        originDialogueID: 25
+        destinationConversationID: 9
+        destinationDialogueID: 78
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: Variable["LucaGoodbye"] = true
       onExecute:
@@ -26195,7 +26201,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Kee-hee! I saved them the trouble!
+        value: Kee-hee! I saved them the trouble of going to that meeting!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -26820,12 +26826,6 @@ MonoBehaviour:
         originDialogueID: 56
         destinationConversationID: 9
         destinationDialogueID: 58
-        isConnector: 0
-        priority: 2
-      - originConversationID: 9
-        originDialogueID: 56
-        destinationConversationID: 9
-        destinationDialogueID: 69
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("B2. Trial of the Trickster Bat") == "success"
@@ -28342,8 +28342,76 @@ MonoBehaviour:
         y: 1609.6626
         width: 160
         height: 30
-    canvasScrollPosition: {x: 708.9839, y: 1514.8206}
-    canvasZoom: 0.5800002
+    - id: 78
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: '[em1]I should say goodbye to Calcaneus before I leave.[/em1]'
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["WispGoodbye"] == true) and (Variable["SilqGoodbye"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 1861.8047
+        y: 527.1702
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 44.117676, y: 91.29222}
+    canvasZoom: 0.34000027
   - id: 10
     fields:
     - title: Title
@@ -31010,6 +31078,12 @@ MonoBehaviour:
         originDialogueID: 34
         destinationConversationID: 10
         destinationDialogueID: 90
+        isConnector: 0
+        priority: 2
+      - originConversationID: 10
+        originDialogueID: 34
+        destinationConversationID: 10
+        destinationDialogueID: 91
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -33795,7 +33869,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You deserve to stay warm, too.
+        value: You need to stay warm, too!
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -35165,7 +35239,75 @@ MonoBehaviour:
         y: 621.09314
         width: 160
         height: 30
-    canvasScrollPosition: {x: 267.49988, y: 332.49982}
+    - id: 91
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: '[em1]I should say goodbye to Calcaneus before I leave.[/em1]'
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 10
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (Variable["WispGoodbye"] == true) and (Variable["LucaGoodbye"]
+        == true)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 2482.4985
+        y: 627.4996
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 110, y: 757.4995}
     canvasZoom: 0.40000027
   - id: 11
     fields:
@@ -38164,15 +38306,15 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetContinueMode(false);
 
-          Fade(stay, 1, #ffffff)@3;
+          Fade(stay, 1, #ffffff)@5;
 
-          AudioWait(Storm)@4;
+          AudioWait(Storm)@6;
 
-          Fade(in, 1, #ffffff)@6;
+          Fade(in, 1, #ffffff)@8;
 
-          SetContinueMode(true)@7;
+          SetContinueMode(true)@9;
 
-          Continue()@7;'
+          Continue()@9;'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 19
@@ -38337,7 +38479,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestEntryState("6. Gratia's Curse", 4, "active")
+      userScript: 'SetQuestEntryState("6. Gratia''s Curse", 4, "active");
+
+        Variable["QuestsCompleted"] = Variable["QuestsCompleted"] + 1'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -47339,7 +47483,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[em1]...Perhaps you should go talk to Luca.[/em1]'
+        value: '[em1]...Perhaps I should go talk to Luca.[/em1]'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -50002,13 +50146,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetContinueMode(false);
 
-          Fade(stay, 1, #000000)@2;
+          Fade(stay, 1, #000000)@4;
 
-          LoadLevel(TitleMenu)@3;
+          LoadLevel(TitleMenu)@5;
 
-          Fade(in, 1, #000000)@4;
+          Fade(in, 1, #000000)@6;
 
-          SetContinueMode(true)@4;'
+          SetContinueMode(true)@6;'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 40
@@ -50152,13 +50296,13 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetContinueMode(false);
 
-          Fade(stay, 1, #000000)@2;
+          Fade(stay, 1, #000000)@4;
 
-          LoadLevel(TitleMenu)@3;
+          LoadLevel(TitleMenu)@5;
 
-          Fade(in, 1, #000000)@4;
+          Fade(in, 1, #000000)@6;
 
-          SetContinueMode(true)@4;'
+          SetContinueMode(true)@6;'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 40
