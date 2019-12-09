@@ -51,7 +51,15 @@ public class TitleCameraMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 contactPoint = collision.GetContact(0).point;
+        ReflectVelocity(collision.GetContact(0).point);
+    }
+
+    /// <summary>
+    /// Reflect the object's velocity based on the relative location of collision.
+    /// </summary>
+    /// <param name="contactPoint">The point at which the object collided with another object.</param>
+    private void ReflectVelocity(Vector2 contactPoint)
+    {
         Vector2 difference = contactPoint - new Vector2(transform.position.x, transform.position.y);
         if (Mathf.Abs(difference.x) >= colliderRadius)
             objectVelocity.x = -objectVelocity.x;
